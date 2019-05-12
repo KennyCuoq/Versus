@@ -1,0 +1,2 @@
+class HomeCtaCard < ApplicationRecord
+end
