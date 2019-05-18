@@ -1,0 +1,2 @@
+class HomeBanner < ApplicationRecord
+end
