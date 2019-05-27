@@ -1,4 +1,5 @@
 class Discipline < ApplicationRecord
   mount_uploader :photo, PhotoUploader
-  validates :name, :description, uniqueness: true, presence: true
+  validates :name, uniqueness: true, presence: true
+  validates :photo, presence: true
 end
