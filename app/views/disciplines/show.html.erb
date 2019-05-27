@@ -1,1 +1,44 @@
-<h1>Hiya <%= @discipline.name %></h1>
+<div id="nav-test"></div>
+<div id="header-div">
+  <h1><%= @discipline.name %></h1>
+</div>
+<div id="wrapper-test">
+  <div id="discipline-content">
+    <%= cl_image_tag @discipline.photo, class: "img-test"%>
+    <div id="description-test">
+      <%= @discipline.description %>
+    </div>
+  </div>
+</div>
+
+<div id="footer-test"></div>
+
+
+<style>
+  #nav-test {
+    width: 100%;
+    height: 100px;
+    background: black;
+  }
+
+  #footer-test {
+    width: 100%;
+    height: 100px;
+    background: white;
+  }
+
+  #wrapper-test {
+    width: 100%;
+    background: black;
+  }
+
+  .img-test {
+    width: 400px;
+  }
+
+  #description-test {
+    color: white;
+  }
+
+
+</style>
