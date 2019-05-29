@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Discipline.destroy_all
+HomeBanner.destroy_all
 
 muay_thai = {
   name: 'Muay Thai',
@@ -31,3 +32,11 @@ disciplines = [muay_thai, mma, bjj]
 disciplines.each do |discipline|
   Discipline.create!(discipline)
 end
+
+# home_banner_1
+HomeBanner.create!(remote_photo_url: "https://images4.alphacoders.com/215/215894.jpg")
+# home_banner_2
+HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-content/uploads/2008/10/cody-no-love-ufc-tmt.jpg")
+# home_banner_3
+HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-brazilian-jiujitsu-academies/img/jiu-jitsu-martial-arts-pursuits-bloomberg-03.jpg")
+

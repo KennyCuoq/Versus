@@ -1,4 +1,6 @@
 <!-- CAROUSEL -->
+<!-- The following line should later be moved to some 'Home Controller or Pages Controller to handle back end for static pages' -->
+<% banners = HomeBanner.all %>
 <div class="row">
   <div id="mycarousel" class="carousel slide hidden-xs hidden-sm" data-ride="carousel">
     <!-- indicators -->
@@ -10,11 +12,11 @@
   <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="wallpaper.jpg" alt="Banner1">
+        <%= cl_image_tag banners[0].photo %>
       </div>
 
       <div class="item">
-        <img src="wallpaper.jpg" alt="Banner2">
+        <%= cl_image_tag banners[1].photo %>
       </div>
 
       <div class="item">
