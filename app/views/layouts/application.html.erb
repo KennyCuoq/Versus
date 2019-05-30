@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
-    <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+     <!-- Google search result-->
+    <title>Versus Performance | Muay Thai, Boxing, MMA, BJJ & Fitness gym in HK</title>
+    <meta name="description" content="Authentic training in Muay Thai, Boxing, MMA, BJJ & Fitness for all levels. We are an independant gym with a friendly community in Sheung Wan. Group & private classes 7 days a week.">
+    <!-- Canonical link = consolidates links count to canonical version -->
+    <link rel="canonical" href="http://versushk.com/">
+   <!-- Facebook sharing card -->
+    <meta property="og:title" content="Versus Performance - Train like a fighter">
+    <meta property="og:image" content="IMAGE-TBC">
+    <meta property="og:description" content="Muay Thai, Boxing, MMA, BJJ & Fitness gym in Sheung Wan, Hong Kong. Group & private training 7 days a week. Join our community.">
+    <meta property="og:site_name" content="Versus Performance"/>
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400i" rel="stylesheet">
+
   </head>
+
+
+
   <body>
-    <%= yield %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+    <!-- MAIN CONTAINER -->
+    <div class="container" >
+      <%= render 'shared/navbar' %>
+      <%= yield %>
+      <%= javascript_include_tag 'application' %>
+      <%= javascript_pack_tag 'application' %>
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

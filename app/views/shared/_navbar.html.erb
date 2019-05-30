@@ -1,0 +1,57 @@
+<!-- NAVBAR -->
+<div class="navbar">
+  <!-- Logo -->
+  <a href="http://www.versushk.com" class="navbar-logo" id="navbar-logo">
+    <img src="vs.png" alt="logo">
+  </a>
+  <!-- left navigation -->
+    <div class="navbar-left hidden-xs hidden-sm">
+      <!-- Dropdown menu -->
+      <div class="navbar-item">
+        <div class="dropdown">
+         <a href="PLACEHOLDER-LINK" class="navbar-item navbar-link"  >CLASSES</a>
+           <ul class="dropdown-content">
+            <% Discipline.all.each do |discipline| %>
+              <li><%= link_to discipline.name,discipline_path(discipline)%></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <!-- Other menu items -->
+      <a href="#" class="navbar-item navbar-link">TRAINERS</a>
+      <a href="#" class="navbar-item navbar-link">PRIVATE TRAINING</a>
+      <a href="#" class="navbar-item navbar-link">SCHEDULE & FEES</a>
+      <a href="#" class="navbar-item navbar-link">ABOUT VERSUS</a>
+    </div>
+
+    <!-- MOBILE EXPERIENCE -->
+  <div class="navbar-mobile hidden-md hidden-lg">
+    <!-- Classes for mobile only -->
+    <div class="navbar-item mobile-navbar">
+      <div class="dropdown">
+       <a href="PLACEHOLDER-LINK" class="navbar-item navbar-link dropdown-toggle"  id="navbar-menu" data-toggle="dropdown">CLASSES</a>
+         <ul class="dropdown-menu">
+          <li><a href="#">CLASS 1</a></li>
+          <li><a href="#">CLASS 2</a></li>
+          <li><a href="#">CLASS 3</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Burger menu for mobile only -->
+    <div class="dropdown navbar-item mobile-navbar">
+      <img src="vs.png" alt="logo">
+      <!-- <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button" ></i> -->
+      <ul class="dropdown-menu">
+        <li><a href="#">TRAINERS</a></li>
+        <li><a href="#">PRIVATE TRAINING</a></li>
+        <li><a href="#">SCHEDULE & FEES</a></li>
+        <li><a href="#">ABOUT VERSUS</a></li>
+      </ul>
+    </div>
+   </div>
+
+  <!-- CTA BUTTON -->
+  <div class="navbar-right hidden-xs hidden-sm">
+    <a href="#"><button type="button" id="navbar-button" class="btn btn-default ">VISIT US</button></a>
+  </div>
+</div>

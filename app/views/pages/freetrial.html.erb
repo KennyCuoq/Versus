@@ -1,16 +1,26 @@
-<div class="page-title">
-      <%= @discipline.name.upcase %>
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+      FREE TRIAL
     </div>
 
-    <!-- CLASS PAGE STUFF -->
-      <div class="class-cards">
-        <%= cl_image_tag @discipline.photo, class: "class-photo class-cards-category"%>
-        <div class="description class-cards-category">
-          <%= @discipline.description %>
+    <!-- PAGE BANNER -->
+    <div class="page-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    </div>
+
+    <!-- Free trial text -->
+
+    <!-- HOME PAGE STUFF -->
+      <div class="home-cards">
+        <div id="free-trial" class="home-cards-category">
+          We offer a free trial class to Hong Kong residents.<br><br>
+          Appointments are preferred. Please also bring a HKID.<br>
+          We ask you to arrive 15 min ahead of the class to get acquainted with the facilities and sign a form.<br>
+          No pressuring selling.
+        </div>
+        <div id="contact" class="home-cards-category">
+          PLACEHOLDER
         </div>
       </div>
-    </div>
-
 
 <!-- Stylesheet -->
 
@@ -20,20 +30,18 @@
 /*FREE TRIAL*/
 
 
-.class-cards {
-  background-color: black;
+.home-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1px;
-  border: 1px solid white;
-  margin:50px;
-  height:400px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
-.class-cards-category {
+.home-cards-category {
   background-size: cover;
   background-position: center;
-  height: 400px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,49 +54,43 @@
   text-align: center;
 }
 
-.class-photo {
+#free-trial {
   padding:30px;
 /*  border-right: 1px solid white;*/
-}
-
-.description {
-  background-color: white;
-  color:black;
-  padding:20px;
 }
 
 
 /*// Smallest device*/
 @media (min-width: 100px) and (max-width: 575px) {
-  .class-cards {
+  .home-cards {
     grid-template-columns: 1fr;
   }
 }
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-  .class-cards {
+  .home-cards {
     grid-template-columns: 1fr;
   }
 }
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-  .class-cards {
+  .home-cards {
     grid-template-columns: 1fr;
   }
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .class-cards {
+  .home-cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-  .class-cards {
+  .home-cards {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -105,6 +107,7 @@
 /*PAGE BANNER*/
 .page-banner {
   height:300px;
+  border-bottom: 1px solid white;
   background-size: cover;
 }
 
@@ -120,7 +123,6 @@ body {
   font-weight: 300;
   margin-bottom:70px;
   margin-top:70px;
-  background-color:black;
 }
 
 /*Logo*/
