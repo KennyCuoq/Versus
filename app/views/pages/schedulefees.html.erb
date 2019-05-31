@@ -2,3 +2,17 @@
 <div class="page-title">
   SCHEDULE & FEES
 </div>
+
+<ul>
+  <% @class_sessions.each_with_index do |class_session, index| %>
+    <!-- Make sure classes are grouped by Day -->
+    <% if (class_session == @class_sessions.first) || (class_session.day != @class_sessions[index - 1].day) %>
+    <h1><%= class_session.day_string %></h1>
+    <% end %>
+    <li>
+      <p>
+        <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %>
+      </p>
+    </li>
+  <% end %>
+</ul>

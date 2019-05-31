@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_05_27_205041) do
 
   create_table "class_sessions", force: :cascade do |t|
     t.string "discipline"
-    t.string "day"
+    t.integer "day"
     t.time "start_time"
     t.time "end_time"
     t.datetime "created_at", null: false

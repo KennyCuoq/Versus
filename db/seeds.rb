@@ -42,7 +42,7 @@ HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-c
 HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-brazilian-jiujitsu-academies/img/jiu-jitsu-martial-arts-pursuits-bloomberg-03.jpg")
 
 # Create ClassSessions
-days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+days = [1, 2, 3, 4, 5 ,6 ,7]
 
 # Set up some start times for classes
 t_starts = [

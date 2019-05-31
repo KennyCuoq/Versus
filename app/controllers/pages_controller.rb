@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   end
 
   def schedulefees
-    @class_sessions = ClassSession.all
+    @class_sessions = ClassSession.order(day: :asc, start_time: :asc)
   end
 end
