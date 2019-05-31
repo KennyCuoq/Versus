@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   end
 
   def schedulefees
-    @disciplines = Discipline.all
+    @class_sessions = ClassSession.all
   end
 end

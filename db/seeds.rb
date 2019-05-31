@@ -8,6 +8,7 @@
 
 Discipline.destroy_all
 HomeBanner.destroy_all
+ClassSession.destroy_all
 
 muay_thai = {
   name: 'Muay Thai',
@@ -40,21 +41,37 @@ HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-c
 # home_banner_3
 HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-brazilian-jiujitsu-academies/img/jiu-jitsu-martial-arts-pursuits-bloomberg-03.jpg")
 
+# Create ClassSessions
+days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+
+# Set up some start times for classes
+t_starts = [
+  Time.new(2100, 12, 31, 8),
+  Time.new(2100, 12, 31, 9),
+  Time.new(2100, 12, 31, 10),
+  Time.new(2100, 12, 31, 13),
+  Time.new(2100, 12, 31, 14),
+  Time.new(2100, 12, 31, 15)
+]
+
+# Set up some end times for classes
+t_ends = [
+  Time.new(2100, 12, 31, 9, 30),
+  Time.new(2100, 12, 31, 10),
+  Time.new(2100, 12, 31, 11, 45),
+  Time.new(2100, 12, 31, 14, 30),
+  Time.new(2100, 12, 31, 15),
+  Time.new(2100, 12, 31, 17, 30)
+]
+
+# Create schedule for each day
+days.each do |day|
+  # Create a session for each specific start date
+  t_starts.each_with_index do |t_start, index|
+    ClassSession.create!(day: day, start_time: t_start, end_time: t_ends[index], discipline: disciplines.sample[:name])
+  end
+end
 
 
 
-
-
-
-
-
-
-
-  # create_table "class_sessions", force: :cascade do |t|
-  #   t.string "discipline"
-  #   t.string "day"
-  #   t.time "start_time"
-  #   t.time "end_time"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
 
