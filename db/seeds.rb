@@ -40,3 +40,21 @@ HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-c
 # home_banner_3
 HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-brazilian-jiujitsu-academies/img/jiu-jitsu-martial-arts-pursuits-bloomberg-03.jpg")
 
+
+
+
+
+
+
+
+
+
+
+  # create_table "class_sessions", force: :cascade do |t|
+  #   t.string "discipline"
+  #   t.string "day"
+  #   t.time "start_time"
+  #   t.time "end_time"
+  #   t.datetime "created_at", null: false
+  #   t.datetime "updated_at", null: false
+
