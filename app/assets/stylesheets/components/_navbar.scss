@@ -8,6 +8,10 @@
   border-right: 1px solid white;
 }
 
+.navbar-logo:hover #navbar-logo:hover {
+  filter: grayscale(100%);
+}
+
 img {
   height: 30px;
   margin-top:3px;
