@@ -1,14 +1,14 @@
 <div class="navbar">
   <!-- Logo -->
   <a href="http://www.versushk.com" class="navbar-logo" id="navbar-logo">
-    <img src="vs.png" alt="logo">
+    <img src="https://res.cloudinary.com/dxzgio39l/image/upload/v1559308540/VS.png" alt="versus performance hk">
   </a>
   <!-- left navigation -->
     <div class="navbar-left hidden-xs hidden-sm">
       <!-- Dropdown menu -->
-      <div class="navbar-item">
+      <div id="classes">
         <div class="dropdown">
-         <a href="PLACEHOLDER-LINK" class="navbar-item navbar-link"  >CLASSES</a>
+         <a class="navbar-item navbar-link">CLASSES</a>
            <ul class="dropdown-content">
             <li><a href="#">CLASS 1</a></li>
             <li><a href="#">CLASS 2</a></li>
@@ -17,10 +17,10 @@
         </div>
       </div>
       <!-- Other menu items -->
-      <a href="#" class="navbar-item navbar-link">TRAINERS</a>
-      <a href="#" class="navbar-item navbar-link">PRIVATE TRAINING</a>
-      <a href="#" class="navbar-item navbar-link">SCHEDULE & FEES</a>
-      <a href="#" class="navbar-item navbar-link">ABOUT VERSUS</a>
+      <a><%= link_to "TRAINERS", "freetrial", class: "navbar-item navbar-link" %></a>
+      <a><%= link_to "PRIVATE TRAINING", "freetrial", class: "navbar-item navbar-link" %></a>
+      <a><%= link_to "SCHEDULE & FEES", "freetrial", class: "navbar-item navbar-link" %></a>
+      <a><%= link_to "ABOUT VERSUS", "freetrial", class: "navbar-item navbar-link" %></a>
     </div>
 
     <!-- MOBILE EXPERIENCE -->
@@ -51,6 +51,6 @@
 
   <!-- CTA BUTTON -->
   <div class="navbar-right hidden-xs hidden-sm">
-    <a href="#"><button type="button" id="navbar-button" class="btn btn-default ">VISIT US</button></a>
+    <a><button type="button" id="navbar-button" class="button btn btn-dark"><%= link_to "VISIT US", "freetrial" %></button></a>
   </div>
 </div>
