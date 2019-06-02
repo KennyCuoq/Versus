@@ -9,6 +9,7 @@
 Discipline.destroy_all
 HomeBanner.destroy_all
 ClassSession.destroy_all
+PackageGroup.destroy_all
 
 muay_thai = {
   name: 'Muay Thai',
@@ -75,31 +76,31 @@ days.each do |day|
 end
 
 #Create Package Groups
-private_training = PackageGroup.create!(name: "Private Training")
-group_classes = PackageGroup.create!(name: "Group Classes (valid 3 months)")
-monthly_passes = PackageGroup.create!(name: "Monthly Passes")
+private_training = PackageGroup.create!(name: "Private Training", order: 1)
+group_classes = PackageGroup.create!(name: "Group Classes (valid 3 months)", o Pder: 2s
+monthly_passes = PackageGroup.create!(name: "Monthly Passes", order: 3)
 
 #Create Packages
 
 #Private Training
-Package.create!(title: "Muaythai (1h)", price: 500, description: "1o1 ring session with one of our trainers", package_group: private_training)
-Package.create!(title: "Fitness (30min)", price: 250, description: "HIIT and Weight session tailored to your needs", package_group: private_training)
+Package.create!(title: "Muaythai (1h)", price: 500, description: "1o1 ring session with one of our trainers", order: 1, package_group: private_training)
+Package.create!(title: "Fitness (30min)", price: 250, description: "HIIT and Weight session tailored to your needs", order: 2, package_group: private_training)
 
 #Group Classes
-Package.create!(title: "Trial", price: 0, description: "Choose any available class ($150 without HKID)", package_group: group_classes)
-Package.create!(title: "Single", price: 220, description: "Choose any available class", package_group: group_classes)
-Package.create!(title: "5 Classes", price: 1000, description: "Choose any available class", package_group: group_classes)
-Package.create!(title: "10 Classes", price: 1800, description: "Choose any available class", package_group: group_classes)
-Package.create!(title: "20 Classes", price: 3200, description: "Choose any available class", package_group: group_classes)
+Package.create!(title: "Trial", price: 0, description: "Choose any available class ($150 without HKID)", order: 1, package_group: group_classes)
+Package.create!(title: "Single", price: 220, description: "Choose any available class", order: 2, package_group: group_classes)
+Package.create!(title: "5 Classes", price: 1000, description: "Choose any available class", order: 3, package_group: group_classes)
+Package.create!(title: "10 Classes", price: 1800, description: "Choose any available class", order: 4, package_group: group_classes)
+Package.create!(title: "20 Classes", price: 3200, description: "Choose any available class", order: 5, package_group: group_classes)
 
 # Monthly Passes
-Package.create!(title: "Trial Month", price: 999, description: "Unlimited full access (first month only)", package_group: monthly_passes)
-Package.create!(title: "Unlimited Lite (1 month)", price: 1500, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", package_group: monthly_passes)
-Package.create!(title: "Unlimited Lite (2 months)", price: 3600, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", package_group: monthly_passes)
-Package.create!(title: "Unlimited Lite (3 months)", price: 6000, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", package_group: monthly_passes)
-Package.create!(title: "Unlimited Full (1 month)", price: 1800, description: "Full access to all classes", package_group: monthly_passes)
-Package.create!(title: "Unlimited Full (2 months)", price: 4500, description: "Full access to all classes", package_group: monthly_passes)
-Package.create!(title: "Unlimited Full (3 months)", price: 7800, description: "Full access to all classes", package_group: monthly_passes)
+Package.create!(title: "Trial Month", price: 999, description: "Unlimited full access (first month only)", order: 1, package_group: monthly_passes)
+Package.create!(title: "Unlimited Lite (1 month)", price: 1500, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", order: 2, package_group: monthly_passes)
+Package.create!(title: "Unlimited Lite (2 months)", price: 3600, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", order: 3, package_group: monthly_passes)
+Package.create!(title: "Unlimited Lite (3 months)", price: 6000, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", order: 4, package_group: monthly_passes)
+Package.create!(title: "Unlimited Full (1 month)", price: 1800, description: "Full access to all classes", order: 5, package_group: monthly_passes)
+Package.create!(title: "Unlimited Full (2 months)", price: 4500, description: "Full access to all classes", order: 6, package_group: monthly_passes)
+Package.create!(title: "Unlimited Full (3 months)", price: 7800, description: "Full access to all classes", order: 7, package_group: monthly_passes)
 
 
 

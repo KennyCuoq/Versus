@@ -4,16 +4,28 @@
 </div>
 
 <div id="container-schedule">
-<% @class_sessions.each_with_index do |class_session, index| %>
-  <% if (class_session == @class_sessions.first) || (class_session.day != @class_sessions[index - 1].day) %>
-    <div class="day">
-      <h3><%= class_session.day_string %></h3>
+  <% @class_sessions.each_with_index do |class_session, index| %>
+    <% if (class_session == @class_sessions.first) || (class_session.day != @class_sessions[index - 1].day) %>
+      <div class="day">
+        <h3><%= class_session.day_string %></h3>
+      </div>
+    <% end %>
+    <div class="class-item">
+      <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %>
     </div>
   <% end %>
-  <div class="class-item">
-    <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %>
-  </div>
-<% end %>
+</div>
+
+<div id="container-schedule">
+  <% @package_groups.each do |package_group| %>
+    <div class="day">
+      <h3><%= package_group.name %></h3>
+    </div>
+    <% package_group.packages.each do |package| %>
+      <div class="class-item"> <%= package.title %> - $<%= package.price %> - <%= package.description %></div>
+    <% end %>
+  <% end %>
+</div>
 
 <style>
   #container-schedule {

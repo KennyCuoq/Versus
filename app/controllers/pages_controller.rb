@@ -4,6 +4,6 @@ class PagesController < ApplicationController
 
   def schedulefees
     @class_sessions = ClassSession.order(day: :asc, start_time: :asc)
-    @packages = Package.all
+    @package_groups = PackageGroup.order(order: :asc).includes(:packages).order(order: :asc)
   end
 end

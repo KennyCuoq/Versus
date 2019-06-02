@@ -1,4 +1,4 @@
 class PackageGroup < ApplicationRecord
-  validates :name, presence: true
-  has_many :packages
+  validates :name, :order, presence: true
+  has_many :packages, dependent: :destroy
 end
