@@ -42,6 +42,8 @@ HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-c
 HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-brazilian-jiujitsu-academies/img/jiu-jitsu-martial-arts-pursuits-bloomberg-03.jpg")
 
 # Create ClassSessions
+
+#Create array with number for each day of the week
 days = [1, 2, 3, 4, 5 ,6 ,7]
 
 # Set up some start times for classes
@@ -71,6 +73,33 @@ days.each do |day|
     ClassSession.create!(day: day, start_time: t_start, end_time: t_ends[index], discipline: disciplines.sample[:name])
   end
 end
+
+#Create Package Groups
+private_training = PackageGroup.create!(name: "Private Training")
+group_classes = PackageGroup.create!(name: "Group Classes (valid 3 months)")
+monthly_passes = PackageGroup.create!(name: "Monthly Passes")
+
+#Create Packages
+
+#Private Training
+Package.create!(title: "Muaythai (1h)", price: 500, description: "1o1 ring session with one of our trainers", package_group: private_training)
+Package.create!(title: "Fitness (30min)", price: 250, description: "HIIT and Weight session tailored to your needs", package_group: private_training)
+
+#Group Classes
+Package.create!(title: "Trial", price: 0, description: "Choose any available class ($150 without HKID)", package_group: group_classes)
+Package.create!(title: "Single", price: 220, description: "Choose any available class", package_group: group_classes)
+Package.create!(title: "5 Classes", price: 1000, description: "Choose any available class", package_group: group_classes)
+Package.create!(title: "10 Classes", price: 1800, description: "Choose any available class", package_group: group_classes)
+Package.create!(title: "20 Classes", price: 3200, description: "Choose any available class", package_group: group_classes)
+
+# Monthly Passes
+Package.create!(title: "Trial Month", price: 999, description: "Unlimited full access (first month only)", package_group: monthly_passes)
+Package.create!(title: "Unlimited Lite (1 month)", price: 1500, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", package_group: monthly_passes)
+Package.create!(title: "Unlimited Lite (2 months)", price: 3600, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", package_group: monthly_passes)
+Package.create!(title: "Unlimited Lite (3 months)", price: 6000, description: "Choose Muaythai & Boxing or BJJ or MMA(+ No gi) or Fitness(HIIT/Kickfit)", package_group: monthly_passes)
+Package.create!(title: "Unlimited Full (1 month)", price: 1800, description: "Full access to all classes", package_group: monthly_passes)
+Package.create!(title: "Unlimited Full (2 months)", price: 4500, description: "Full access to all classes", package_group: monthly_passes)
+Package.create!(title: "Unlimited Full (3 months)", price: 7800, description: "Full access to all classes", package_group: monthly_passes)
 
 
 
