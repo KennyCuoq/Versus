@@ -12,6 +12,7 @@ HomeBanner.destroy_all
 ClassSession.destroy_all
 PackageGroup.destroy_all
 HomeCtaCard.destroy_all
+Trainer.destroy_all
 
 # ---------- Disciplines ----------
 
