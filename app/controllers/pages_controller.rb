@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @home_banners = HomeBanner.all
   end
 
   def schedulefees

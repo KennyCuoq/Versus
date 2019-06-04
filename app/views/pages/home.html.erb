@@ -8,17 +8,11 @@
   </ol>
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
-    <div class="item active">
-      <img src="wallpaper.jpg" alt="Banner1">
-    </div>
-
-    <div class="item">
-      <img src="wallpaper.jpg" alt="Banner2">
-    </div>
-
-    <div class="item">
-      <img src="wallpaper.jpg" alt="Banner3">
-    </div>
+    <% @home_banners.shuffle.each_with_index do |banner, index| %>
+      <div class="item <%= 'active' if index == 0 %>">
+        <%= cl_image_tag banner.photo %>
+      </div>
+    <% end %>
   </div>
 
   <!-- Left and right controls -->
