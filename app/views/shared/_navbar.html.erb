@@ -1,14 +1,14 @@
 <div class="navbar">
   <!-- Logo -->
-  <a href="http://www.versushk.com" class="navbar-logo" id="navbar-logo">
+  <%= link_to root_path, class: "navbar-logo", id: "navbar-logo" do %>
     <img src="vs.png" alt="logo">
-  </a>
+  <% end %>
   <!-- left navigation -->
     <div class="navbar-left hidden-xs hidden-sm">
       <!-- Dropdown menu -->
       <div class="navbar-item">
         <div class="dropdown">
-         <a href="PLACEHOLDER-LINK" class="navbar-item navbar-link"  >CLASSES</a>
+         <a class="navbar-item navbar-link"  >CLASSES</a>
            <ul class="dropdown-content">
             <% Discipline.all.each do |discipline| %>
               <li><%= link_to discipline.name,discipline_path(discipline)%></li>
@@ -18,9 +18,9 @@
       </div>
       <!-- Other menu items -->
       <%= link_to "TRAINERS", trainers_path, class: "navbar-item navbar-link"%>
-      <a href="#" class="navbar-item navbar-link">PRIVATE TRAINING</a>
+      <%= link_to "PRIVATE TRAINING", private_training_path, class: "navbar-item navbar-link" %>
       <%= link_to "SCHEDULE & FEES", schedule_and_fees_path, class: "navbar-item navbar-link"%>
-      <a href="#" class="navbar-item navbar-link">ABOUT VERSUS</a>
+      <%= link_to "ABOUT VERSUS", about_us_path, class: "navbar-item navbar-link"%>
     </div>
 
     <!-- MOBILE EXPERIENCE -->
@@ -51,6 +51,6 @@
 
   <!-- CTA BUTTON -->
   <div class="navbar-right hidden-xs hidden-sm">
-    <a href="#"><button type="button" id="navbar-button" class="btn btn-default ">VISIT US</button></a>
+    <%= link_to "VISIT US", visit_us_path, class: "btn btn-default", type: "button", id: "navbar-button"%>
   </div>
 </div>

@@ -12,4 +12,13 @@ class PagesController < ApplicationController
   def trainers
     @trainers = Trainer.all
   end
+
+  def private_training
+  end
+
+  def about_us
+  end
+
+  def visit_us
+  end
 end
