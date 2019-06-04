@@ -10,5 +10,6 @@ class PagesController < ApplicationController
   end
 
   def trainers
+    @trainers = Trainer.all
   end
 end
