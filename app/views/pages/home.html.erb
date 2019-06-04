@@ -28,18 +28,13 @@
 </div>
 
 <!-- CARDS -->
+
 <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    <a href="#"><button type="button" id="card-button" class="btn btn-dark ">PRIVATE TRAINING</button></a>
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-    <a href="#"><button type="button" id="card-button" class="btn btn-dark ">PRIVATE TRAINING</button></a>
-  </div>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-     <a href="#"><button type="button" id="card-button" class="btn btn-dark ">PRIVATE TRAINING</button></a>
-  </div>
+  <% @home_cta_cards.each do |card| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= card.photo %>)">
+      <a href="<%= card.link_url %>"><button type="button" id="card-button" class="btn btn-dark "><%= card.title.upcase %></button></a>
+    </div>
+  <% end %>
 </div>
 
 <!-- HOME PAGE STUFF -->

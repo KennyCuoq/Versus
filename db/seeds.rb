@@ -6,11 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Clear Database
 Discipline.destroy_all
 HomeBanner.destroy_all
 ClassSession.destroy_all
 PackageGroup.destroy_all
+HomeCtaCard.destroy_all
 
+# ---------- Disciplines ----------
+
+# Set up attributes for disciplines
 muay_thai = {
   name: 'Muay Thai',
   remote_photo_url: 'http://www.muaythaischolar.com/wp-content/uploads/2016/12/Kickers.jpg',
@@ -30,17 +35,13 @@ bjj = {
   description: "Known as the ‘gentle art’, Brazilian jiujitsu (BJJ) is a martial art, combat sport, and a self defense system that focuses on grappling and especially ground fighting. The art was derived from the japanese martial art of kodokan judo (which itself is derived from japanese jujutsu) in the early 20th century. It teaches that a smaller, weaker person can successfully defend against a bigger, stronger assailant by using leverage and proper technique – most notably by applying joint-locks and chokeholds to defeat the other person. BJJ training can be used for sport grappling tournaments (gi and no-gi) and is essential to mixed martial arts (MMA) training or self defense. Sparring (commonly referred to as “rolling”) and live drilling play a major role in training, and a premium is placed on performance, especially in competition, in relation to progress and ascension through its ranking system."
 }
 
+# Actually create disciplines from above data
 disciplines = [muay_thai, mma, bjj]
 disciplines.each do |discipline|
   Discipline.create!(discipline)
 end
 
-# home_banner_1
-HomeBanner.create!(remote_photo_url: "https://images4.alphacoders.com/215/215894.jpg")
-# home_banner_2
-HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-content/uploads/2008/10/cody-no-love-ufc-tmt.jpg")
-# home_banner_3
-HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-brazilian-jiujitsu-academies/img/jiu-jitsu-martial-arts-pursuits-bloomberg-03.jpg")
+# ---------- Class Sessions / Schedule ----------
 
 # Create ClassSessions
 
@@ -75,9 +76,11 @@ days.each do |day|
   end
 end
 
+# ---------- Packages and Package Groups ----------
+
 #Create Package Groups
 private_training = PackageGroup.create!(name: "Private Training", order: 1)
-group_classes = PackageGroup.create!(name: "Group Classes (valid 3 months)", o Pder: 2s
+group_classes = PackageGroup.create!(name: "Group Classes (valid 3 months)", order: 2)
 monthly_passes = PackageGroup.create!(name: "Monthly Passes", order: 3)
 
 #Create Packages
@@ -102,6 +105,38 @@ Package.create!(title: "Unlimited Full (1 month)", price: 1800, description: "Fu
 Package.create!(title: "Unlimited Full (2 months)", price: 4500, description: "Full access to all classes", order: 6, package_group: monthly_passes)
 Package.create!(title: "Unlimited Full (3 months)", price: 7800, description: "Full access to all classes", order: 7, package_group: monthly_passes)
 
+# ---------- Home Banners ----------
 
+# Create HomeBanners
+# home_banner_1
+HomeBanner.create!(remote_photo_url: "https://images4.alphacoders.com/215/215894.jpg")
+# home_banner_2
+HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-content/uploads/2008/10/cody-no-love-ufc-tmt.jpg")
+# home_banner_3
+HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-brazilian-jiujitsu-academies/img/jiu-jitsu-martial-arts-pursuits-bloomberg-03.jpg")
 
+# ---------- Home CTA Cards ----------
+
+# Create Home CTA Cards
+
+card_1 = {
+  title: "Private Training",
+  link_url: "http://versus.com",
+  remote_photo_url:'https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg'
+}
+HomeCtaCard.create!(card_1)
+
+card_2 = {
+  title: "Schedule and Fees",
+  link_url: 'http://localhost:3000/schedule-and-fees',
+  remote_photo_url: 'https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg'
+}
+HomeCtaCard.create!(card_2)
+
+card_3 = {
+  title: "Visit us",
+  link_url: 'https://github.com/',
+  remote_photo_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg"
+}
+HomeCtaCard.create!(card_3)
 
