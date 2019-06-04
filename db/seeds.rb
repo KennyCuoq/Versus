@@ -122,21 +122,21 @@ HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-br
 
 card_1 = {
   title: "Private Training",
-  link_url: "http://versus.com",
+  link_url: "/private-training",
   remote_photo_url:'https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg'
 }
 HomeCtaCard.create!(card_1)
 
 card_2 = {
   title: "Schedule and Fees",
-  link_url: 'http://localhost:3000/schedule-and-fees',
+  link_url: '/schedule-and-fees',
   remote_photo_url: 'https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg'
 }
 HomeCtaCard.create!(card_2)
 
 card_3 = {
   title: "Visit us",
-  link_url: 'https://github.com/',
+  link_url: '/visit-us',
   remote_photo_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg"
 }
 HomeCtaCard.create!(card_3)
