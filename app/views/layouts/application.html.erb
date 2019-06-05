@@ -40,12 +40,13 @@
 
   <body>
     <!-- MAIN CONTAINER -->
+    <%= render 'shared/navbar' %>
     <div class="container" >
-      <%= render 'shared/navbar' %>
       <%= yield %>
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
-      <%= render 'shared/footer' %>
     </div>
+    <%= render 'shared/footer' %>
+
   </body>
 </html>

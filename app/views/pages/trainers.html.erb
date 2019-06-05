@@ -1,0 +1,17 @@
+<div class="page-title">
+  TRAINERS
+</div>
+
+
+<!-- CLASS PAGE STUFF -->
+<% @trainers.each do |trainer| %>
+  <div class="class-cards">
+    <%= cl_image_tag trainer.photo, class: "class-photo class-cards-category"%>
+    <div class="description class-cards-category">
+      <h3><%= trainer.name %></h3>
+      <p><%= trainer.specialty %></p>
+      <p><%= trainer.description %></p>
+    </div>
+  </div>
+<% end %>
+</div>

@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_27_205041) do
+ActiveRecord::Schema.define(version: 2019_06_02_212934) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "class_sessions", force: :cascade do |t|
     t.string "discipline"
-    t.string "day"
+    t.integer "day"
     t.time "start_time"
     t.time "end_time"
     t.datetime "created_at", null: false
@@ -46,12 +46,22 @@ ActiveRecord::Schema.define(version: 2019_05_27_205041) do
     t.string "photo"
   end
 
+  create_table "package_groups", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "order"
+  end
+
   create_table "packages", force: :cascade do |t|
     t.string "title"
     t.float "price"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "package_group_id"
+    t.integer "order"
+    t.index ["package_group_id"], name: "index_packages_on_package_group_id"
   end
 
   create_table "trainers", force: :cascade do |t|
@@ -75,4 +85,5 @@ ActiveRecord::Schema.define(version: 2019_05_27_205041) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "packages", "package_groups"
 end
