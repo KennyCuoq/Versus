@@ -1,3 +1,18 @@
+// Facebook
+.fb-page {
+  width:100%;
+  margin: 10px 20px;
+}
+
+#big-logo {
+  height:80px;
+  margin:20px;
+}
+
+#welcome {
+  font-size: 14px;
+}
+
 /*CAROUSEL*/
 
 .carousel {
@@ -8,7 +23,6 @@
 .carousel-inner {
   height:500px;
 }
-
 
 /*CARDS*/
 .cards {
@@ -120,20 +134,20 @@
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
   .home-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
   .home-cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
   .home-cards {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
