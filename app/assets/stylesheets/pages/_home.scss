@@ -1,18 +1,19 @@
 // Facebook
 .fb-page {
-  width:100%;
+  width:70%;
   margin: 30px 20px;
 }
 
-// Instafeed
-#instafeed {
-  width:100%;
-  margin: 30px 20px;
+.big-logo-div {
+  width: 100%;
 }
+
+// Text part
 
 #big-logo {
   height:80px;
-  margin:20px;
+  margin:20px 50px;
+  justify-content:center;
 }
 
 #welcome {
