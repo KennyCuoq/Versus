@@ -1,11 +1,15 @@
 /*Logo*/
 .navbar-logo {
   padding-left: 10px;
-  padding-right: 50px;
+  padding-right: 70px;
   height: 35px;
   width: 35px;
   vertical-align: center;
   border-right: 1px solid white;
+}
+
+.navbar-logo:hover #navbar-logo:hover {
+  filter: grayscale(100%);
 }
 
 img {
@@ -16,17 +20,6 @@ img {
 
 
 /* DESKTOP */
-
-/*BUTTON*/
-
-#navbar-button {
-  margin: 30px;
-}
-
-#card-button {
-  margin: 30px;
-}
-
 
 /* Left section */
 .navbar-right {
@@ -82,6 +75,10 @@ ul {
 .navbar-link:hover {
   color: #808080 ;
   text-decoration: none;
+}
+
+#classes {
+  margin-left:25px;
 }
 
 /*MOBILE */
