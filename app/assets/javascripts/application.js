@@ -1,2 +1,3 @@
-//= require rails-ujs
+//= require jquery
+//= require instafeed
 //= require_tree .
