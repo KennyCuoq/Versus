@@ -1,4 +1,4 @@
-/*Logo*/
+// /*Logo*/
 .navbar-logo {
   padding-left: 10px;
   padding-right: 70px;
@@ -90,23 +90,25 @@ ul {
   align-items: center;
   justify-content: flex-end;
 }
-/* Dropdown menu */
+/* DROPDOWN */
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
-  display: inline-block;
+  // display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  display: none;
+  display: inline;
   position: absolute;
   background-color: black;
-  justify-content: center;
+  text-align: center;
   font-size: 15px !important;
   line-height: 32px !important;
   padding: 20px 20px;
+  right:30%;
+  white-space: nowrap;
 }
 
 /* Links inside the dropdown */
@@ -131,6 +133,29 @@ ul {
   cursor: pointer;
   padding: 0 20px;
   display: inline-flex;
+}
+
+// Dropdown - submenu
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  right: 100%;
+  margin-top: -1px;
+}
+
+#submenu {
+  text-align: left;
+  text-decoration: underline;
+}
+
+.dropdown-divider {
+  border-top: 1px solid white;
+  margin: 10px 25px;
+  width: auto;
 }
 
 
