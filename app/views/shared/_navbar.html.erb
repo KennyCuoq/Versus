@@ -25,25 +25,22 @@
 
     <!-- MOBILE EXPERIENCE -->
   <div class="navbar-mobile hidden-md hidden-lg">
-    <!-- Classes for mobile only -->
-<!--     <div class="navbar-item mobile-navbar">
-      <div class="dropdown">
-       <a href="PLACEHOLDER-LINK" class="navbar-item navbar-link dropdown-toggle"  id="navbar-menu" data-toggle="dropdown">CLASSES</a>
-         <ul class=">
-          <li><a href="#">CLASS 1</a></li>
-          <li><a href="#">CLASS 2</a></li>
-          <li><a href="#">CLASS 3</a></li>
-        </ul>
-      </div>
-    </div> -->
+
     <!-- Burger menu for mobile only -->
     <div class="dropdown navbar-item mobile-navbar">
       <i class="fas fa-bars fa-2x dropdown-toggle" data-toggle="dropdown" role="button" ></i>
       <ul class="dropdown-content">
-        <li><a href="#">TRAINERS</a></li>
-        <li><a href="#">PRIVATE TRAINING</a></li>
-        <li><a href="#">SCHEDULE & FEES</a></li>
-        <li><a href="#">ABOUT VERSUS</a></li>
+        <li><%= link_to "CLASSES", trainers_path %><span class="caret"></span></li>
+           <ul id="submenu">
+            <% Discipline.all.each do |discipline| %>
+              <li><%= link_to discipline.name,discipline_path(discipline)%></li>
+            <% end %>
+          </ul>
+        <div class="dropdown-divider"></div>
+        <li><%= link_to "TRAINERS", trainers_path %></li>
+        <li><%= link_to "PRIVATE TRAINING", private_training_path %></li>
+        <li><%= link_to "SCHEDULE & FEES", schedule_and_fees_path %></li>
+        <li><%= link_to "ABOUT VERSUS", about_us_path %></li>
       </ul>
     </div>
    </div>
