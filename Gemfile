@@ -17,6 +17,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
@@ -31,6 +32,7 @@ group :development, :test do
   gem 'dotenv-rails', groups: [:development, :test]
 end
 
-
+# Railsadmin
 gem 'remotipart', github: 'mshibuya/remotipart'
 gem 'rails_admin', '>= 1.0.0.rc'
+
