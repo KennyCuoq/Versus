@@ -10,6 +10,7 @@
         <div class="dropdown">
          <a class="navbar-item navbar-link"  >CLASSES</a>
            <ul class="dropdown-content">
+            <li><%= link_to "Free trial", free_trial_path %></li>
             <% Discipline.all.each do |discipline| %>
               <li><%= link_to discipline.name,discipline_path(discipline)%></li>
             <% end %>
