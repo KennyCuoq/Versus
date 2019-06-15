@@ -21,4 +21,8 @@ class PagesController < ApplicationController
 
   def visit_us
   end
+
+  def free_trial
+  end
+
 end

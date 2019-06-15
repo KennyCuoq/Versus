@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get 'private-training', to: "pages#private_training"
   get 'about-us', to: "pages#about_us"
   get 'visit-us', to: "pages#visit_us"
+  get 'free-trial', to: "pages#free-trial"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
