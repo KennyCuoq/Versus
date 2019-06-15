@@ -163,3 +163,4 @@ Trainer.create!(
   description: "Michael grew up in Hong Kong, studying sports science and started training since he was in his late teens. He has an excellent base in Muaythai, boxing and MMA – competing in and winning professional fights. He is conscientious and an excellent trainer. He teaches Muaythai, boxing and fitness classes, and is also available for private training sessions.",
   remote_photo_url: "http://versushk.com/wp-content/uploads/2018/08/Mikepic-137x300.jpg"
   )
+
