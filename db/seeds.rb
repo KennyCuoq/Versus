@@ -110,11 +110,11 @@ Package.create!(title: "Unlimited Full (3 months)", price: 7800, description: "F
 
 # Create HomeBanners
 # home_banner_1
-HomeBanner.create!(remote_photo_url: "https://images4.alphacoders.com/215/215894.jpg")
+HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1560670403/aoj1.jpg")
 # home_banner_2
 HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-content/uploads/2008/10/cody-no-love-ufc-tmt.jpg")
 # home_banner_3
-HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-brazilian-jiujitsu-academies/img/jiu-jitsu-martial-arts-pursuits-bloomberg-03.jpg")
+HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1560670405/aoj2.jpg")
 
 # ---------- Home CTA Cards ----------
 
@@ -123,21 +123,21 @@ HomeBanner.create!(remote_photo_url: "https://www.bloomberg.com/features/2016-br
 card_1 = {
   title: "Private Training",
   link_url: "/private-training",
-  remote_photo_url:'https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg'
+  remote_photo_url:'https://i.ytimg.com/vi/0UWpPqaW3hc/maxresdefault.jpg'
 }
 HomeCtaCard.create!(card_1)
 
 card_2 = {
   title: "Schedule and Fees",
   link_url: '/schedule-and-fees',
-  remote_photo_url: 'https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg'
+  remote_photo_url: 'https://cdn.evolve-mma.com/wp-content/uploads/2017/10/Boxing-Focus-Mitts-1024x542.jpg'
 }
 HomeCtaCard.create!(card_2)
 
 card_3 = {
   title: "Visit us",
   link_url: '/visit-us',
-  remote_photo_url: "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg"
+  remote_photo_url: "http://www.theedge.hk/sites/default/files/gym%20ring%20and%20floor%204mb.jpg"
 }
 HomeCtaCard.create!(card_3)
 
