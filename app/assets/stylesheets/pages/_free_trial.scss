@@ -1,16 +1,22 @@
+#free-trial {
+  color: white;
+  text-align:center;
+  padding:30px;
+}
+
 /*WELCOME*/
-.visit-title {
+.free-title {
   font-size: 25px;
   margin: 20px 10px;
 }
 
-.visit-cards {
+.free-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 50px;
 }
 
-.visit-cards-category {
+.free-cards-category {
   background-size: cover;
   background-position: left;
   height: auto;
@@ -27,7 +33,7 @@
   padding: 25px;
 }
 
-#visit {
+#free {
   padding:30px;
 /*  border-right: 1px solid white;*/
 }
@@ -35,46 +41,46 @@
 
 /*// Smallest device*/
 @media (min-width: 100px) and (max-width: 575px) {
-  .visit-cards {
+  .free-cards {
     grid-template-columns: 1fr;
   }
 }
 
 /*// Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-  .visit-cards {
+  .free-cards {
     grid-template-columns: 1fr;
   }
 }
 
 /*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-  .visit-cards {
+  .free-cards {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  .visit-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+  .free-cards {
+    grid-template-columns: 1fr 1fr ;
   }
 }
 
 /*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-  .visit-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+  .free-cards {
+    grid-template-columns: 1fr 1fr ;
   }
 }
 
 // Logo
 
-#big-logo-visit {
+#big-logo-free {
   height:80px;
   align-self: center;
 }
 
-#visit-logo {
+#free-logo {
   justify-content: left;
 }
