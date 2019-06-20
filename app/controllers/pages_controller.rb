@@ -6,6 +6,7 @@ class PagesController < ApplicationController
 
   def schedulefees
     @class_sessions = ClassSession.order(day: :asc, start_time: :asc)
+    @days = @class_sessions.map(&:day_string).uniq
     @package_groups = PackageGroup.order(order: :asc).includes(:packages).order(order: :asc)
   end
 
@@ -24,5 +25,4 @@ class PagesController < ApplicationController
 
   def free_trial
   end
-
 end

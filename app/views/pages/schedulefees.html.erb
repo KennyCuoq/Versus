@@ -3,18 +3,21 @@
   SCHEDULE & FEES
 </div>
 
-<div id="container-schedule">
-  <% @class_sessions.each_with_index do |class_session, index| %>
-    <% if (class_session == @class_sessions.first) || (class_session.day != @class_sessions[index - 1].day) %>
-      <div class="day">
-        <h3><%= class_session.day_string %></h3>
-      </div>
-    <% end %>
-    <div class="class-item">
-      <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %>
+
+<div class="row">
+  <% @days.each_with_index do |day| %>
+    <div class="day col-xs-12 col-sm-6 col-md-3">
+      <h3><%= day.upcase %></h3>
+      <p>
+        <% @class_sessions.select{|cs| cs.day_string == day }.each do |class_session| %>
+          <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %><br />
+        <% end %>
+      </p>
     </div>
   <% end %>
 </div>
+
+
 
 <div id="container-schedule">
   <% @package_groups.each do |package_group| %>
@@ -28,15 +31,7 @@
 </div>
 
 <style>
-  #container-schedule {
-    margin: auto;
-    width: 50%;
-    background: white;
-    margin-top: 10px;
-  }
-
-  .day {
-    text-align: center;
-    padding: 10px;
-  }
+.day  {
+  padding: 60px 60px;
+}
 </style>
