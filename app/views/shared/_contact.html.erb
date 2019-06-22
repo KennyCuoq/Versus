@@ -1,0 +1,67 @@
+<form id="contactform"  method="POST">
+
+<!-- OPTION 1a => Free trial  -->
+  <% if current_page?(free_trial_path) %>
+  <br>
+    <p>Leave us a message to let us know you are coming!</p>
+    <br>
+  <% end %>
+
+    <!-- Name -->
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" placeholder="Your name">
+    </div>
+  </div>
+
+  <!-- email -->
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">Email</label>
+    </div>
+    <div class="col-75">
+      <input type="text" placeholder="Your email">
+    </div>
+  </div>
+
+
+  <!-- OPTION 1b => Free trial  -->
+  <% if current_page?(free_trial_path) %>
+    <%= render 'shared/contact_options/contactclass'  %>
+  <% end %>
+  <!-- OPTION 2 => Private training  -->
+  <% if current_page?(private_training_path) %>
+    <%= render 'shared/contact_options/contacttrainer'  %>
+  <% end %>
+
+
+  <!-- Text -->
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Your message</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <!-- Send -->
+  <div class="row">
+    <input class ="button" type="submit" value="SEND YOUR MESSAGE">
+  </div>
+
+  <!-- Meta -->
+   <input type="hidden" name="_subject" value="<%= controller.action_name %>" />
+      <!-- Sends users back to home page after messenge is sent -->
+      <!-- <input type="hidden" name="_next" value="//mywebsite.com/thanks.html" /> -->
+      <!-- Spam prevention honeypot security protocol -->
+      <input type="text" name="_gotcha" style="display:none" />
+  </form>
+
+  <!-- Javascript security, replacing action="//formspree.io/victor.king.fr@gmail.com" in opening formtag -->
+  <script>
+      var contactform =  document.getElementById('contactform');
+      contactform.setAttribute('action', '//formspree.io/' + 'victor.king.fr' + '@' + 'gmail' + '.' + 'com');
+  </script>

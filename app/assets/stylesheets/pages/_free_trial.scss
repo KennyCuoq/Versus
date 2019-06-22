@@ -1,10 +1,11 @@
+// REST OF THE PAGE
+
 #free-trial {
   color: white;
   text-align:center;
   padding:30px;
 }
 
-/*WELCOME*/
 .free-title {
   font-size: 25px;
   margin: 20px 10px;
@@ -24,7 +25,7 @@
   justify-content: left;
   align-items: left;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   // font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 /*  border-radius: 5px;*/
@@ -37,7 +38,6 @@
   padding:30px;
 /*  border-right: 1px solid white;*/
 }
-
 
 /*// Smallest device*/
 @media (min-width: 100px) and (max-width: 575px) {
