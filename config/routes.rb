@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'about-us', to: "pages#about_us"
   get 'visit-us', to: "pages#visit_us"
   get 'free-trial', to: "pages#free-trial"
+  get 'facilities', to: "pages#facilities"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

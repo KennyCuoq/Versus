@@ -31,4 +31,8 @@ class PagesController < ApplicationController
   def free_trial
     @free_trial = true
   end
+
+  def facilities
+    @facilities = true
+  end
 end
