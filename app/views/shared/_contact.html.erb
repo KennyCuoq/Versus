@@ -14,6 +14,18 @@
     <br><br>
   <% end %>
 
+<!-- OPTION 3 => About us  -->
+  <br><br>
+  <% if current_page?(about_us_path) %>
+    <br>
+    <p>Feel free to visit us or to leave us a message!</p>
+    <br><br>
+  <% elsif current_page?(facilities_path) %>
+    <br>
+    <p>Feel free to drop by for a tour or to leave us a message!</p>
+    <br><br>
+  <% end %>
+
     <!-- Name -->
   <div class="row">
     <div class="col-25">
