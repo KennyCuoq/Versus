@@ -9,7 +9,7 @@
       <div id="classes">
         <div class="dropdown">
          <a class="navbar-item navbar-link"  >CLASSES</a>
-           <ul class="dropdown-content">
+           <ul class="dropdown-content" id="desktop">
             <li><%= link_to "Free trial", free_trial_path %></li>
             <% Discipline.all.each do |discipline| %>
               <li><%= link_to discipline.name,discipline_path(discipline)%></li>
@@ -21,7 +21,16 @@
       <%= link_to "TRAINERS", trainers_path, class: "navbar-item navbar-link"%>
       <%= link_to "PRIVATE TRAINING", private_training_path, class: "navbar-item navbar-link" %>
       <%= link_to "SCHEDULE & FEES", schedule_and_fees_path, class: "navbar-item navbar-link"%>
-      <%= link_to "ABOUT VERSUS", about_us_path, class: "navbar-item navbar-link"%>
+      <!-- Dropdown menu -->
+      <div id="aboutus">
+        <div class="dropdown">
+         <a class="navbar-item navbar-link"  >ABOUT VERSUS</a>
+           <ul class="dropdown-content desktop">
+            <li><%= link_to "WHO WE ARE", about_us_path %></li>
+            <li><%= link_to "OUR FACILITIES", facilities_path %></li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- MOBILE EXPERIENCE -->
@@ -30,9 +39,11 @@
     <!-- Burger menu for mobile only -->
     <div class="dropdown navbar-item mobile-navbar">
       <i class="fas fa-bars fa-2x dropdown-toggle" data-toggle="dropdown" role="button" ></i>
-      <ul class="dropdown-content">
-        <li><%= link_to "CLASSES", trainers_path %><span class="caret"></span></li>
-           <ul id="submenu">
+      <!-- Mobile sub-dropdown for classes -->
+      <ul class="dropdown-content ">
+        <li><%= link_to "CLASSES" %><span class="caret"></span></li>
+           <ul class="submenu">
+            <li><%= link_to "Free trial", free_trial_path %></li>
             <% Discipline.all.each do |discipline| %>
               <li><%= link_to discipline.name,discipline_path(discipline)%></li>
             <% end %>
@@ -41,7 +52,13 @@
         <li><%= link_to "TRAINERS", trainers_path %></li>
         <li><%= link_to "PRIVATE TRAINING", private_training_path %></li>
         <li><%= link_to "SCHEDULE & FEES", schedule_and_fees_path %></li>
-        <li><%= link_to "ABOUT VERSUS", about_us_path %></li>
+
+        <!-- Mobile sub-dropdown for About us -->
+        <li><%= link_to "ABOUT VERSUS" %><span class="caret"></span></li>
+           <ul class="submenu">
+            <li><%= link_to "Who we are", about_us_path %></li>
+            <li><%= link_to "Our facilities", facilities_path %></li>
+          </ul>
       </ul>
     </div>
    </div>
