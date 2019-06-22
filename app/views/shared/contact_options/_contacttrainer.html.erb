@@ -3,7 +3,7 @@
     <label for="choice">Trainer</label>
   </div>
   <div class="col-75">
-    <select id="trainer-form" name="trainer">
+    <select id="dropdown-form" name="trainer">
       <% Trainer.all.each do |trainer| %>
         <option value="<%=trainer.name %>"><%= trainer.name %></option>
       <% end %>

@@ -1,6 +1,6 @@
-// * {
-//   box-sizing: border-box;
-// }
+* {
+  box-sizing: border-box;
+}
 
 input[type=text], select, textarea {
   width: 100%;
@@ -17,20 +17,11 @@ label {
 }
 
 input[type=submit] {
-  // background-color: #4CAF50;
-  // color: white;
   padding: 8px;
   margin-top:30px;
-  // width:100px;
-  // border: none;
-  // border-radius: 4px;
   cursor: pointer;
   float: right;
 }
-
-// input[type=submit]:hover {
-//   background-color: #45a049;
-// }
 
 .container {
   // border-radius: 5px;
@@ -64,8 +55,8 @@ input[type=submit] {
     margin-top: 0;
   }
 }
-// Class form
+// Dropdown form
 
-#class-form {
+#dropdown-form {
   margin:12px 0px;
 }
