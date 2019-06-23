@@ -16,23 +16,4 @@ class PagesController < ApplicationController
     @trainers = Trainer.all
   end
 
-  def private_training
-    @private_training = true
-  end
-
-  def about_us
-    @about_us = true
-  end
-
-  def visit_us
-    @visit_us = true
-  end
-
-  def free_trial
-    @free_trial = true
-  end
-
-  def facilities
-    @facilities = true
-  end
 end

@@ -3,21 +3,74 @@
   SCHEDULE & FEES
 </div>
 
+<div class="schedule-fees-cards">
+  <div class="schedule-fees-cards-category">
+     <h1>SCHEDULE</h1>
+     <hr size=5 width=20% align=left margin=20px>
+     <br><br>
 
-<div class="row">
-  <% @days.each_with_index do |day| %>
-    <div class="day col-xs-12 col-sm-6 col-md-3">
-      <h3><%= day.upcase %></h3>
-      <p>
-        <% @class_sessions.select{|cs| cs.day_string == day }.each do |class_session| %>
-          <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %><br />
+      <p><i class="fas fa-bullseye"></i></i>&nbsp&nbsp&nbsp&nbsp   Achieve your goals with personalized workouts.</p>
+      <br><br>
+  </div>
+  <div class="schedule-fees-cards-category">
+    <h1>FEES</h1>
+     <hr size=5 width=20% align=left margin=20px>
+     <br><br>
+
+     <% @package_groups.each do |package_group| %>
+        <h3><%= package_group.name %></h3>
+        <table>
+          <% package_group.packages.each_with_index do |package, index| %>
+       <!--    check if pack d avant a meme description, si c le cas pas de td,a part si c le premier element
+            check if package suivant a meme descrip
+            si le cas, check si package suivant a meme description
+
+            check que packet d avant n a pas la meme description -->
+            <% rowspan = 1 %>
+            <% i = index %>
+            <% while !package_group.packages[i + 1].nil? && package.description == package_group.packages[i + 1].description %>
+              <% rowspan +=1 %>
+              <% i +=1 %>
+            <% end %>
+            <tr>
+              <td><%= package.title %></td>
+              <td>$<%= package.price %></td>
+              <% if package_group.packages[index - 1].description != package.description || index == 0 %>
+                <td rowspan="<%= rowspan %>"><%= package.description %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </table>
+      <% end %>
+
+      <!-- what we want is for td to span as more rows if packages after share the same description -->
+
+      <% @package_groups.each do |package_group| %>
+        <h3><%= package_group.name %></h3>
+        <% package_group.packages.each do |package| %>
+          <div class="class-item"> <%= package.title %> - $<%= package.price %> - <%= package.description %></div>
         <% end %>
-      </p>
-    </div>
-  <% end %>
+      <% end %>
+  </div>
 </div>
 
 
+
+<div class="container">
+  <div class="row justify-content-center">
+    <% @days.each do |day| %>
+      <div class="day col-xs-12 col-sm-6 col-md-3">
+        <h3><%= day.upcase %></h3>
+        <hr size="5" width="80%" align="left" margin="20px">
+        <p>
+          <% @class_sessions.select{|cs| cs.day_string == day }.each do |class_session| %>
+            <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %><br />
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 <div id="container-schedule">
   <% @package_groups.each do |package_group| %>
@@ -33,5 +86,39 @@
 <style>
 .day  {
   padding: 60px 60px;
+  color: white;
+}
+
+.row-centered {
+  margin: auto;
+}
+
+
+.schedule-fees-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+}
+
+
+.schedule-fees-cards-category {
+  background-size: cover;
+  background-position: left;
+  height: auto;
+/*  display: flex;
+  justify-content: left;
+  align-items: left;*/
+  color: white;
+  font-size: 14px;
+  // font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+/*  border-radius: 5px;*/
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: left;
+  padding: 25px;
+}
+
+table, th, td {
+  border: 1px solid white;
 }
 </style>
