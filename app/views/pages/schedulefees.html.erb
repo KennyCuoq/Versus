@@ -5,87 +5,59 @@
 
 <div class="schedule-fees-cards">
   <div class="schedule-fees-cards-category">
-     <h1>SCHEDULE</h1>
-     <hr size=5 width=20% align=left margin=20px>
-     <br><br>
+    <h1>SCHEDULE</h1>
+    <hr size=5 width=20% align=left margin=20px>
 
-      <p><i class="fas fa-bullseye"></i></i>&nbsp&nbsp&nbsp&nbsp   Achieve your goals with personalized workouts.</p>
-      <br><br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <% @days.each do |day| %>
+          <div class="day col-xs-12 col-sm-6">
+            <h3><%= day.upcase %></h3>
+            <hr size="5" width="80%" align="left" margin="20px">
+            <p>
+              <% @class_sessions.select{|cs| cs.day_string == day }.each do |class_session| %>
+                <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %><br />
+              <% end %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
+
   <div class="schedule-fees-cards-category">
     <h1>FEES</h1>
-     <hr size=5 width=20% align=left margin=20px>
-     <br><br>
+    <hr size=5 width=20% align=left margin=20px>
 
-     <% @package_groups.each do |package_group| %>
-        <h3><%= package_group.name %></h3>
-        <table>
-          <% package_group.packages.each_with_index do |package, index| %>
-       <!--    check if pack d avant a meme description, si c le cas pas de td,a part si c le premier element
-            check if package suivant a meme descrip
-            si le cas, check si package suivant a meme description
-
-            check que packet d avant n a pas la meme description -->
-            <% rowspan = 1 %>
-            <% i = index %>
-            <% while !package_group.packages[i + 1].nil? && package.description == package_group.packages[i + 1].description %>
-              <% rowspan +=1 %>
-              <% i +=1 %>
-            <% end %>
-            <tr>
-              <td><%= package.title %></td>
-              <td>$<%= package.price %></td>
-              <% if package_group.packages[index - 1].description != package.description || index == 0 %>
-                <td rowspan="<%= rowspan %>"><%= package.description %></td>
-              <% end %>
-            </tr>
-          <% end %>
-        </table>
-      <% end %>
-
-      <!-- what we want is for td to span as more rows if packages after share the same description -->
-
-      <% @package_groups.each do |package_group| %>
-        <h3><%= package_group.name %></h3>
-        <% package_group.packages.each do |package| %>
-          <div class="class-item"> <%= package.title %> - $<%= package.price %> - <%= package.description %></div>
-        <% end %>
-      <% end %>
-  </div>
-</div>
-
-
-
-<div class="container">
-  <div class="row justify-content-center">
-    <% @days.each do |day| %>
-      <div class="day col-xs-12 col-sm-6 col-md-3">
-        <h3><%= day.upcase %></h3>
-        <hr size="5" width="80%" align="left" margin="20px">
-        <p>
-          <% @class_sessions.select{|cs| cs.day_string == day }.each do |class_session| %>
-            <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %><br />
-          <% end %>
-        </p>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div id="container-schedule">
-  <% @package_groups.each do |package_group| %>
-    <div class="day">
+    <% @package_groups.each do |package_group| %>
       <h3><%= package_group.name %></h3>
-    </div>
-    <% package_group.packages.each do |package| %>
-      <div class="class-item"> <%= package.title %> - $<%= package.price %> - <%= package.description %></div>
+      <table>
+        <% package_group.packages.each_with_index do |package, index| %>
+          <% rowspan = 1 %>
+          <% i = index %>
+          <% while !package_group.packages[i + 1].nil? && package.description == package_group.packages[i + 1].description %>
+            <% rowspan +=1 %>
+            <% i +=1 %>
+          <% end %>
+          <tr>
+            <td class="cell"><%= package.title %></td>
+            <td class="cell">$<%= package.price %></td>
+            <% if package_group.packages[index - 1].description != package.description || index == 0 %>
+              <td class="cell" rowspan="<%= rowspan %>"><%= package.description %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
     <% end %>
-  <% end %>
+  </div>
 </div>
+
+
+
 
 <style>
 .day  {
-  padding: 60px 60px;
+  padding: 0px 60px 40px 0px;
   color: white;
 }
 
@@ -121,4 +93,46 @@
 table, th, td {
   border: 1px solid white;
 }
+
+.cell {
+  padding: 15px 15px;
+}
+
+/*// Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
+
+
 </style>

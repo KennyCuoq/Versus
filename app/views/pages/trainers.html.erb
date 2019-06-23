@@ -3,15 +3,35 @@
 </div>
 
 
-<!-- CLASS PAGE STUFF -->
-<% @trainers.each do |trainer| %>
-  <div class="class-cards">
-    <%= cl_image_tag trainer.photo, class: "class-photo class-cards-category"%>
-    <div class="description class-cards-category">
-      <h3><%= trainer.name %></h3>
-      <p><%= trainer.specialty %></p>
-      <p><%= trainer.description %></p>
-    </div>
+  <div class="test">
+
+    <% @trainers.each do |trainer| %>
+      <div class="col-xs-12 col-sm-6 trainer-card">
+
+      </div>
+    <% end %>
   </div>
-<% end %>
-</div>
+
+
+<!-- CLASS PAGE STUFF -->
+
+
+<style>
+
+  .flex-center {
+    display: flex;
+
+    /*justify-content: center;*/
+  }
+
+  .row-trainers {
+    max-width: 100%;
+    margin: auto;
+  }
+  .trainer-card {
+    height: 400px;
+    width: 400px;
+    background: red;
+    margin: 15px 15px;
+  }
+</style>
