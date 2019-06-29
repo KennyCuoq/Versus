@@ -52,6 +52,10 @@
       <%= yield %>
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
+      <!-- Devise set-up -->
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= render 'shared/flashes'  %>
     </div>
     <%= render 'shared/footer' %>
 
