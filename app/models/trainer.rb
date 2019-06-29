@@ -1,4 +1,4 @@
 class Trainer < ApplicationRecord
   mount_uploader :photo, PhotoUploader
-  validates :name, :specialty, :description, :photo, presence: true
+  validates :name, :specialty, :achievement, :description, :photo, presence: true
 end

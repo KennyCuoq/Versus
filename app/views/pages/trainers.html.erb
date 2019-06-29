@@ -18,18 +18,20 @@
 
         <!-- Logo & Name -->
           <div class="trainer-text">
-             <img class="big-logo-trainers" src="https://res.cloudinary.com/dxzgio39l/image/upload/v1559442967/VsLogoLong.png" alt="big-logo">
+             <img class="big-logo-trainers" src="https://res.cloudinary.com/dxzgio39l/image/upload/v1561777784/VS-withbackground.jpg">
              <h3><%= trainer.name.upcase %></h3>
              <br>
-              <p><%= trainer.specialty  %></p>
+              <p><%= trainer.achievement  %></p>
               <br>
 
              <!-- CTA -->
-            <a href="<%= private_training_path %>" class="trainer-cta"><button type="button" class="button btn btn-dark">BOOK YOUR PRIVATE WITH <%= trainer.name.upcase %></button></a>
+            <a href="<%= private_training_path %>" ><button type="button" class="button btn btn-dark">BOOK YOUR PRIVATE WITH <%= trainer.name.upcase %></button></a>
+            <br><br>
+            <p><%= trainer.specialty  %></p>
 
             <!-- description -->
 
-            <br><br><br>
+            <br>
             <p><%= trainer.description  %></p>
           </div>
 

@@ -1,8 +1,4 @@
-// Button
 
-.trainer-cta {
-  margin:20px;
-}
 
 // text
 .portrait {
@@ -29,8 +25,8 @@
 
 .trainers-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding: 50px;
+  // grid-template-columns: 1fr;
+  padding: 20px;
 }
 
 .trainers-cards-category {
@@ -94,7 +90,7 @@
 // Logo
 
 #big-logo-trainers {
-  height:50px;
+  height:70px;
   align-self: center;
 }
 
