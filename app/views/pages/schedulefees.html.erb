@@ -3,40 +3,136 @@
   SCHEDULE & FEES
 </div>
 
-<div id="container-schedule">
-  <% @class_sessions.each_with_index do |class_session, index| %>
-    <% if (class_session == @class_sessions.first) || (class_session.day != @class_sessions[index - 1].day) %>
-      <div class="day">
-        <h3><%= class_session.day_string %></h3>
+<div class="schedule-fees-cards">
+  <div class="schedule-fees-cards-category">
+    <h1>SCHEDULE</h1>
+    <hr size=5 width=20% align=left margin=20px>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <% @days.each do |day| %>
+          <div class="day col-xs-12 col-sm-6">
+            <h3><%= day.upcase %></h3>
+            <hr size="5" width="80%" align="left" margin="20px">
+            <p>
+              <% @class_sessions.select{|cs| cs.day_string == day }.each do |class_session| %>
+                <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %><br />
+              <% end %>
+            </p>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-    <div class="class-item">
-      <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %>
     </div>
-  <% end %>
+  </div>
+
+  <div class="schedule-fees-cards-category">
+    <h1>FEES</h1>
+    <hr size=5 width=20% align=left margin=20px>
+
+    <% @package_groups.each do |package_group| %>
+      <h3><%= package_group.name %></h3>
+      <table>
+        <% package_group.packages.each_with_index do |package, index| %>
+          <% rowspan = 1 %>
+          <% i = index %>
+          <% while !package_group.packages[i + 1].nil? && package.description == package_group.packages[i + 1].description %>
+            <% rowspan +=1 %>
+            <% i +=1 %>
+          <% end %>
+          <tr>
+            <td class="cell"><%= package.title %></td>
+            <td class="cell">$<%= package.price %></td>
+            <% if package_group.packages[index - 1].description != package.description || index == 0 %>
+              <td class="cell" rowspan="<%= rowspan %>"><%= package.description %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </table>
+    <% end %>
+  </div>
 </div>
 
-<div id="container-schedule">
-  <% @package_groups.each do |package_group| %>
-    <div class="day">
-      <h3><%= package_group.name %></h3>
-    </div>
-    <% package_group.packages.each do |package| %>
-      <div class="class-item"> <%= package.title %> - $<%= package.price %> - <%= package.description %></div>
-    <% end %>
-  <% end %>
-</div>
+
+
 
 <style>
-  #container-schedule {
-    margin: auto;
-    width: 50%;
-    background: white;
-    margin-top: 10px;
-  }
+.day  {
+  padding: 0px 60px 40px 0px;
+  color: white;
+}
 
-  .day {
-    text-align: center;
-    padding: 10px;
+.row-centered {
+  margin: auto;
+}
+
+
+.schedule-fees-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+}
+
+
+.schedule-fees-cards-category {
+  background-size: cover;
+  background-position: left;
+  height: auto;
+/*  display: flex;
+  justify-content: left;
+  align-items: left;*/
+  color: white;
+  font-size: 14px;
+  // font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+/*  border-radius: 5px;*/
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: left;
+  padding: 25px;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+.cell {
+  padding: 15px 15px;
+}
+
+/*// Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr;
   }
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .schedule-fees-cards {
+    grid-template-columns: 1fr 1fr ;
+  }
+}
+
+
+
 </style>
