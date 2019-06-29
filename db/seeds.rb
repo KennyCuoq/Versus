@@ -154,7 +154,7 @@ Trainer.create!(
 Trainer.create!(
   name: "Phil McAlpine",
   specialty: "Muay Thai . Boxing . Fitness . Strength & Conditioning",
-  achievement: "Former #3 ranked Fighter at Rajademnern Stadium, Bangkok",
+  achievement: "Former professionnal Muay Thai Figher in Thailand . Ranked #3 ranked at Rajademnern Stadium, Bangkok",
   description: "Born in ​England, ​Phil came to ​Hong ​Kong in 2010 after spending many years in ​Thailand, living, training and fighting with some of the best ​Muay​thai fighters in the world and attaining a no. 3 ranking at Rajademnern Stadium, Bangkok. With over 20 years experience he teaches ​Muaythai and boxing, and is available for ​private ​training sessions.",
   remote_photo_url: "http://versushk.com/wp-content/uploads/2018/08/philpic2-e1533828390106.jpg"
   )
@@ -162,7 +162,7 @@ Trainer.create!(
 Trainer.create!(
   name: "Michael Dacuno",
   specialty: "Muaythai . Boxing. Fitness . Strengh & Conditioning . NASM qualified",
-  achievement: "Professional Muay Thai Fighter . NASM qualified . Hong Kong Muaythai champion 2017, I-1 champion, I-1 Asia champion ",
+  achievement: "Professional Muay Thai Fighter . NASM qualified . Hong Kong Muaythai champion 2017 . I-1 champion, I-1 Asia champion ",
   description: "Michael grew up in Hong Kong, studying sports science and started training since he was in his late teens. He has an excellent base in Muaythai, boxing and MMA – competing in and winning professional fights. He is conscientious and an excellent trainer. He teaches Muaythai, boxing and fitness classes, and is also available for private training sessions.",
   remote_photo_url: "http://versushk.com/wp-content/uploads/2018/08/Mikepic-137x300.jpg"
   )
