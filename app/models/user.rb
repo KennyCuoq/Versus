@@ -4,3 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :recoverable, :rememberable, :validatable
   validates :email, presence: true
 end
+
+# 852Train-like_a/Fighter!
