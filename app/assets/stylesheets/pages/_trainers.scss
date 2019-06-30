@@ -1,0 +1,99 @@
+
+
+// text
+.portrait {
+  width:100%;
+  height:450px;
+  background-size: cover;
+}
+
+.trainer-profile {
+  background-color: white;
+  color:black;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.trainer-text {
+  padding:20px;
+}
+
+.trainers-title {
+  font-size: 25px;
+  margin: 20px 10px;
+}
+
+.trainers-cards {
+  display: grid;
+  // grid-template-columns: 1fr;
+  padding: 20px;
+}
+
+.trainers-cards-category {
+  background-size: cover;
+  background-position: left;
+  height: auto;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  color: white;
+  font-size: 16px;
+  // font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+/*  border-radius: 5px;*/
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: left;
+  padding: 25px;
+}
+
+#trainers {
+  padding:30px;
+/*  border-right: 1px solid white;*/
+}
+
+
+/*// Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .trainers-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*// Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .trainers-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .trainers-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*// Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  .trainers-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*// Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .trainers-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Logo
+
+#big-logo-trainers {
+  height:70px;
+  align-self: center;
+}
+
+#trainers-logo {
+  justify-content: left;
+}

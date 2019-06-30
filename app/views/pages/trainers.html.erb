@@ -2,36 +2,47 @@
   TRAINERS
 </div>
 
+<!-- CARDS -->
 
-  <div class="test">
+<div class="trainers-cards">
 
-    <% @trainers.each do |trainer| %>
-      <div class="col-xs-12 col-sm-6 trainer-card">
+  <% @trainers.each do |trainer| %>
+
+    <div id="trainers" class="trainers-cards-category">
+
+      <div class="big-logo-div trainer-profile">
+
+        <!-- Photo -->
+        <div class="portrait" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= trainer.photo %>)">
+        </div>
+
+        <!-- Logo & Name -->
+          <div class="trainer-text">
+             <img class="big-logo-trainers" src="https://res.cloudinary.com/dxzgio39l/image/upload/v1561777784/VS-withbackground.jpg">
+             <h4><%= trainer.name.upcase %></h4>
+             <br>
+              <p><%= trainer.achievement  %></p>
+              <br>
+
+             <!-- CTA -->
+            <a href="<%= private_training_path %>" ><button type="button" class="button btn btn-dark">BOOK YOUR PRIVATE WITH <%= trainer.name.upcase %></button></a>
+            <br><br>
+            <p><%= trainer.specialty  %></p>
+
+            <!-- description -->
+
+            <br>
+            <p><%= trainer.description  %></p>
+          </div>
 
       </div>
-    <% end %>
-  </div>
 
 
-<!-- CLASS PAGE STUFF -->
+    </div>
 
 
-<style>
+  <% end %>
 
-  .flex-center {
-    display: flex;
+</div>
 
-    /*justify-content: center;*/
-  }
 
-  .row-trainers {
-    max-width: 100%;
-    margin: auto;
-  }
-  .trainer-card {
-    height: 400px;
-    width: 400px;
-    background: red;
-    margin: 15px 15px;
-  }
-</style>
