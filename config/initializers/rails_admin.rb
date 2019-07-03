@@ -1,5 +1,10 @@
 RailsAdmin.config do |config|
 
+  # Admin
+  config.authorize_with do
+   redirect_to root_path unless warden.user.admin == true
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
