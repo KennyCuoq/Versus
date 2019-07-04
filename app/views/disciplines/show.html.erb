@@ -2,6 +2,10 @@
   <%= @discipline.name.upcase %>
 </div>
 
+<div class="page-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @discipline.photo %>)">
+
+</div>
+
 <!-- CLASS PAGE STUFF -->
   <div class="class-cards">
     <%= cl_image_tag @discipline.photo, class: "class-photo class-cards-category"%>
@@ -10,3 +14,4 @@
     </div>
   </div>
 </div>
+
