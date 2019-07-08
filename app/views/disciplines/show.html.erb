@@ -6,11 +6,41 @@
 
 </div>
 
-<!-- CLASS PAGE STUFF -->
-  <div class="class-cards">
-    <%= cl_image_tag @discipline.photo, class: "class-photo class-cards-category"%>
-    <div class="description class-cards-category">
-      <%= @discipline.description %>
+
+<!-- CARDS -->
+<div class="private-cards">
+
+  <div id="private" class="private-cards-category">
+    <div class="big-logo-div">
+     <h1><%= @discipline.name.upcase %></h1>
+     <hr size=5 width=20% align=left margin=20px>
+     <br><br>
+
+      <p>
+        <%= @discipline.description %>
+      </p>
+    </div>
+  </div>
+
+  <div id="private" class="private-cards-category">
+    <div>
+      <h1><%= "UPCOMING " + @discipline.name.upcase + " CLASSES" %></h1>
+      <hr size=5 width=20% align=left margin=20px>
+      <br><br>
+      <p>
+        <%= "Check out our schedule to look out for relevant classes." if @relevant_classes.empty? %>
+        <% @relevant_classes.each do |key, class_session_array| %>
+          <%= class_session_array[0].day_string %>:
+          <% class_session_array.each_with_index do |class_session, index| %>
+            <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %>
+            <% if index != class_session_array.size - 1 %>
+              |
+            <% end %>
+          <% end %>
+          <br>
+        <% end %>
+      </p>
+      <%= link_to "CHECK OUT OUR SCHEDULE", schedule_and_fees_path, class: "button btn btn-dark", type: "button", id: "navbar-button"%>
     </div>
   </div>
 </div>
