@@ -15,5 +15,4 @@ class PagesController < ApplicationController
   def trainers
     @trainers = Trainer.all
   end
-
 end
