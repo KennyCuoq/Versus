@@ -1,63 +1,16 @@
-
 .about-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 50px;
 }
 
-.about-cards-category {
-  background-size: cover;
-  background-position: left;
-  height: auto;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  color: white;
-  font-size: 14px;
-  // font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-/*  border-radius: 5px;*/
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  text-align: left;
-  padding: 25px;
-}
 
 #about {
   padding:30px;
 /*  border-right: 1px solid white;*/
 }
 
-/*// Smallest device*/
-@media (min-width: 100px) and (max-width: 575px) {
-  .about-cards {
-    grid-template-columns: 1fr;
-  }
+#about-contact {
+  justify-content: center;
 }
 
-/*// Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-  .about-cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-/*// Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-  .about-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/*// Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-  .about-cards {
-    grid-template-columns: 1fr 1fr ;
-  }
-}
-
-/*// Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-  .about-cards {
-    grid-template-columns: 1fr 1fr ;
-  }
-}
