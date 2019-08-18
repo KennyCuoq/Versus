@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/mshibuya/remotipart.git
+  remote: git://github.com/mshibuya/remotipart.git
   revision: 999f98133c6f4438995127799e44e1d5284c844e
   specs:
     remotipart (1.4.2)
@@ -313,7 +313,7 @@ DEPENDENCIES
   webpacker
 
 RUBY VERSION
-   ruby 2.6.3p105
+   ruby 2.5.3p105
 
 BUNDLED WITH
-   2.0.2
+   2.0.1
