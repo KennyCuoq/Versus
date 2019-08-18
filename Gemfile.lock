@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/mshibuya/remotipart.git
+  remote: https://github.com/mshibuya/remotipart.git
   revision: 999f98133c6f4438995127799e44e1d5284c844e
   specs:
     remotipart (1.4.2)
