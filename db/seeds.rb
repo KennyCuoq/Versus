@@ -19,7 +19,7 @@ Trainer.destroy_all
 # Set up attributes for disciplines
 muay_thai = {
   name: 'Muay Thai',
-  remote_photo_url: 'http://www.muaythaischolar.com/wp-content/uploads/2016/12/Kickers.jpg',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566137157/Classes-MT.jpg',
   description: "Also known as the 'Science of eight limbs', Muaythai is the ancient martial art and national sport of Thailand. Muaythai combines punches, kicks, knee and elbow strikes with clinching and sweeps. It’s considered to be one of the most effective of the striking arts. Our Muaythai classes are authentic from experienced trainers/fighters, in addition to a great workout, they will teach you proper techniques regardless of whether you decide to fight or not."
 }
 

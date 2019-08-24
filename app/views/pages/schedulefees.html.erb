@@ -1,56 +1,52 @@
 <!-- PAGE TITLE -->
-<div class="page-title">
-  SCHEDULE & FEES
+<div class=“page-title”>
+ SCHEDULE & FEES
 </div>
-
-<div class="schedule-fees-cards">
-  <div class="schedule-fees-cards-category">
-    <h1>SCHEDULE</h1>
-    <hr size=5 width=20% align=left margin=20px>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <% @days.each do |day| %>
-          <div class="day col-xs-12 col-sm-6">
-            <h3><%= day.upcase %></h3>
-            <hr size="5" width="80%" align="left" margin="20px">
-            <p>
-              <% @class_sessions.select{|cs| cs.day_string == day }.each do |class_session| %>
-                <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %><br />
-              <% end %>
-            </p>
-          </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-
-  <div class="schedule-fees-cards-category">
-    <h1>FEES</h1>
-    <hr size=5 width=20% align=left margin=20px>
-
-    <% @package_groups.each do |package_group| %>
-      <h3><%= package_group.name %></h3>
-      <table>
-        <% package_group.packages.each_with_index do |package, index| %>
-          <% rowspan = 1 %>
-          <% i = index %>
-          <% while !package_group.packages[i + 1].nil? && package.description == package_group.packages[i + 1].description %>
-            <% rowspan +=1 %>
-            <% i +=1 %>
-          <% end %>
-          <tr>
-            <td class="cell"><%= package.title %></td>
-            <td class="cell">$<%= package.price %></td>
-            <% if package_group.packages[index - 1].description != package.description || index == 0 %>
-              <td class="cell" rowspan="<%= rowspan %>"><%= package.description %></td>
-            <% end %>
-          </tr>
-        <% end %>
-      </table>
-    <% end %>
-  </div>
+<div class=“schedule-fees-cards”>
+ <div class=“schedule-fees-cards-category”>
+   <h1>SCHEDULE</h1>
+   <hr size=5 width=20% align=left margin=20px>
+   <div class=“container”>
+     <div class=“row justify-content-center”>
+       <% @days.each do |day| %>
+         <div class=“day col-xs-12 col-sm-6">
+           <h3><%= day.upcase %></h3>
+           <hr size=“5” width=“80%” align=“left” margin=“20px”>
+           <p>
+             <% @class_sessions.select{|cs| cs.day_string == day }.each do |class_session| %>
+               <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %> | <%= class_session.discipline %><br />
+             <% end %>
+           </p>
+         </div>
+       <% end %>
+     </div>
+   </div>
+ </div>
+ <div class=“schedule-fees-cards-category”>
+   <h1>FEES</h1>
+   <hr size=5 width=20% align=left margin=20px>
+   <% @package_groups.each do |package_group| %>
+     <h3><%= package_group.name %></h3>
+     <table>
+       <% package_group.packages.each_with_index do |package, index| %>
+         <% displayed_price = package.price == 0 ? ‘FREE’ : ‘$’ + package.price.to_i.to_s %>
+         <% rowspan = 1 %>
+         <% i = index %>
+         <% while !package_group.packages[i + 1].nil? && package.description == package_group.packages[i + 1].description %>
+           <% rowspan +=1 %>
+           <% i +=1 %>
+         <% end %>
+         <tr>
+           <td class=“cell”><%= package.title %></td>
+           <td class=“cell”><%= displayed_price %></td>
+           <% if package_group.packages[index - 1].description != package.description || index == 0 %>
+             <td class=“cell” rowspan=“<%= rowspan %>“><%= package.description %></td>
+           <% end %>
+         </tr>
+       <% end %>
+     </table>
+   <% end %>
+ </div>
 </div>
-
 
 
