@@ -32,7 +32,7 @@ mma = {
 
 bjj = {
   name: 'Braziilian Jiu-Jitsu',
-  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566702453/BJJ.jpg',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566702963/Banner-BJJ-3.jpg',
   description: "Known as the ‘gentle art’, Brazilian jiujitsu (BJJ) is a martial art, combat sport, and a self defense system that focuses on grappling and especially ground fighting. The art was derived from the japanese martial art of kodokan judo (which itself is derived from japanese jujutsu) in the early 20th century. It teaches that a smaller, weaker person can successfully defend against a bigger, stronger assailant by using leverage and proper technique – most notably by applying joint-locks and chokeholds to defeat the other person. BJJ training can be used for sport grappling tournaments (gi and no-gi) and is essential to mixed martial arts (MMA) training or self defense. Sparring (commonly referred to as “rolling”) and live drilling play a major role in training, and a premium is placed on performance, especially in competition, in relation to progress and ascension through its ranking system."
 }
 
@@ -156,7 +156,7 @@ Trainer.create!(
   specialty: "Muay Thai . Boxing . Fitness . Strength & Conditioning",
   achievement: "Former professionnal Muay Thai Figher in Thailand . Ranked #3 ranked at Rajademnern Stadium, Bangkok",
   description: "Born in ​England, ​Phil came to ​Hong ​Kong in 2010 after spending many years in ​Thailand, living, training and fighting with some of the best ​Muay​thai fighters in the world and attaining a no. 3 ranking at Rajademnern Stadium, Bangkok. With over 20 years experience he teaches ​Muaythai and boxing, and is available for ​private ​training sessions.",
-  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566704600/trainer_phil.png"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566706618/trainer_phil.jpg"
   )
 
 Trainer.create!(
@@ -164,6 +164,6 @@ Trainer.create!(
   specialty: "Muaythai . Boxing. Fitness . Strengh & Conditioning . NASM qualified",
   achievement: "Professional Muay Thai Fighter . NASM qualified . Hong Kong Muaythai champion 2017 . I-1 champion, I-1 Asia champion ",
   description: "Michael grew up in Hong Kong, studying sports science and started training since he was in his late teens. He has an excellent base in Muaythai, boxing and MMA – competing in and winning professional fights. He is conscientious and an excellent trainer. He teaches Muaythai, boxing and fitness classes, and is also available for private training sessions.",
-  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566704558/trainer_mike.png"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566706615/trainer_mike.jpg"
   )
 
