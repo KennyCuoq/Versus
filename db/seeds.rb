@@ -19,20 +19,20 @@ Trainer.destroy_all
 # Set up attributes for disciplines
 muay_thai = {
   name: 'Muay Thai',
-  remote_photo_url: 'http://www.muaythaischolar.com/wp-content/uploads/2016/12/Kickers.jpg',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566722783/classes_mt2.jpg',
   description: "Also known as the 'Science of eight limbs', Muaythai is the ancient martial art and national sport of Thailand. Muaythai combines punches, kicks, knee and elbow strikes with clinching and sweeps. It’s considered to be one of the most effective of the striking arts. Our Muaythai classes are authentic from experienced trainers/fighters, in addition to a great workout, they will teach you proper techniques regardless of whether you decide to fight or not."
 }
 
 mma = {
   name: 'Mixed Martial Arts',
-  remote_photo_url: 'https://www.tigermuaythai.com/wp-core/wp-content/uploads/2008/10/cody-no-love-ufc-tmt.jpg',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566721032/MMA.jpg',
   description: "MMA is a full contact combat sport that allows the use of both striking and grappling techniques, both standing and on the ground. It could include a range of martial arts including boxing, wrestling, Brazilian jiu-jitsu, Muaythai, kickboxing, taekwondo, karate, judo and other styles.
   Aside from going into competitions, MMA is a great overall workout regime suitable for both men and women. Children and teens can benefit from the disciplinary nature of the training – increase focus, concentration as well as character-building."
 }
 
 bjj = {
   name: 'Braziilian Jiu-Jitsu',
-  remote_photo_url: 'https://i.pinimg.com/originals/2d/02/cc/2d02cc5f5a72fcde54124387a8362ef7.jpg',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566702453/BJJ.jpg',
   description: "Known as the ‘gentle art’, Brazilian jiujitsu (BJJ) is a martial art, combat sport, and a self defense system that focuses on grappling and especially ground fighting. The art was derived from the japanese martial art of kodokan judo (which itself is derived from japanese jujutsu) in the early 20th century. It teaches that a smaller, weaker person can successfully defend against a bigger, stronger assailant by using leverage and proper technique – most notably by applying joint-locks and chokeholds to defeat the other person. BJJ training can be used for sport grappling tournaments (gi and no-gi) and is essential to mixed martial arts (MMA) training or self defense. Sparring (commonly referred to as “rolling”) and live drilling play a major role in training, and a premium is placed on performance, especially in competition, in relation to progress and ascension through its ranking system."
 }
 
@@ -110,11 +110,11 @@ Package.create!(title: "Unlimited Full (3 months)", price: 7800, description: "F
 
 # Create HomeBanners
 # home_banner_1
-HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1560670403/aoj1.jpg")
+HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566137156/Banner-MT-1.jpg")
 # home_banner_2
-HomeBanner.create!(remote_photo_url: "https://www.tigermuaythai.com/wp-core/wp-content/uploads/2008/10/cody-no-love-ufc-tmt.jpg")
+HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566137171/Banner-MT-2.jpg")
 # home_banner_3
-HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1560670405/aoj2.jpg")
+HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566706270/Banner-BJJ-3.jpg")
 
 # ---------- Home CTA Cards ----------
 
@@ -123,21 +123,21 @@ HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image
 card_1 = {
   title: "Private Training",
   link_url: "/private-training",
-  remote_photo_url:'https://i.ytimg.com/vi/0UWpPqaW3hc/maxresdefault.jpg'
+  remote_photo_url:'https://res.cloudinary.com/dxzgio39l/image/upload/v1566702751/PERSONAL_TRAINING.jpg'
 }
 HomeCtaCard.create!(card_1)
 
 card_2 = {
   title: "Schedule and Fees",
   link_url: '/schedule-and-fees',
-  remote_photo_url: 'https://cdn.evolve-mma.com/wp-content/uploads/2017/10/Boxing-Focus-Mitts-1024x542.jpg'
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566703287/schedule_fees.jpg'
 }
 HomeCtaCard.create!(card_2)
 
 card_3 = {
   title: "Visit us",
   link_url: '/visit-us',
-  remote_photo_url: "http://www.theedge.hk/sites/default/files/gym%20ring%20and%20floor%204mb.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566703236/visit_us.jpg"
 }
 HomeCtaCard.create!(card_3)
 
@@ -148,7 +148,7 @@ Trainer.create!(
   specialty: "Mixed Martial Arts . Kickboxing . Boxing . Fitness . Strength & Conditioning",
   achievement: "Professional MMA Fighter . BJJ Black Belt (GFTeam) under Julio Cesar Pereira . Kyokushin Karate Black Belt",
   description: "South-African-born, ​Quinton has been a professional fighter and coach for over 20 years. He has lived and worked solely as a professional fighter in ​Japan to compete in ​Brazilian ​​jiujitsu, ​MMA an​d muaythai; a rare breed ​who can teac​h multiple​ disciplines well. He ​is one of the most sought-after MMA trainers in Hong Kong, especiall​y in the professional circle – he ha​s a unique way of teaching his students for them to absorb his teachings, ​he understands each individual’s needs and personalises trainin​g to maximise results.",
-  remote_photo_url: "http://versushk.com/wp-content/uploads/2018/08/Qpic.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566705553/Trainer_quinton.jpg"
   )
 
 Trainer.create!(
@@ -156,7 +156,7 @@ Trainer.create!(
   specialty: "Muay Thai . Boxing . Fitness . Strength & Conditioning",
   achievement: "Former professionnal Muay Thai Figher in Thailand . Ranked #3 ranked at Rajademnern Stadium, Bangkok",
   description: "Born in ​England, ​Phil came to ​Hong ​Kong in 2010 after spending many years in ​Thailand, living, training and fighting with some of the best ​Muay​thai fighters in the world and attaining a no. 3 ranking at Rajademnern Stadium, Bangkok. With over 20 years experience he teaches ​Muaythai and boxing, and is available for ​private ​training sessions.",
-  remote_photo_url: "http://versushk.com/wp-content/uploads/2018/08/philpic2-e1533828390106.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566719389/trainer_phil.jpg"
   )
 
 Trainer.create!(
@@ -164,6 +164,6 @@ Trainer.create!(
   specialty: "Muaythai . Boxing. Fitness . Strengh & Conditioning . NASM qualified",
   achievement: "Professional Muay Thai Fighter . NASM qualified . Hong Kong Muaythai champion 2017 . I-1 champion, I-1 Asia champion ",
   description: "Michael grew up in Hong Kong, studying sports science and started training since he was in his late teens. He has an excellent base in Muaythai, boxing and MMA – competing in and winning professional fights. He is conscientious and an excellent trainer. He teaches Muaythai, boxing and fitness classes, and is also available for private training sessions.",
-  remote_photo_url: "http://versushk.com/wp-content/uploads/2018/08/Mikepic-137x300.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566706653/trainer_mike.jpg"
   )
 

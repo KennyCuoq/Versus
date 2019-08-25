@@ -27,9 +27,9 @@
 </div>
 
 <!-- CARDS -->
-<div class="cards">
+<div class="CTA-cards">
   <% @home_cta_cards.each do |card| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= card.photo %>)">
+    <div class="triple-card-category home-CTA-cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= card.photo %>)">
       <a href="<%= card.link_url %>"><button type="button" id="card-button" class="button btn btn-dark "><%= card.title.upcase %></button></a>
     </div>
   <% end %>
@@ -38,7 +38,7 @@
 
 <!-- HOME PAGE STUFF -->
 <div class="home-cards">
-  <div id="welcome" class="home-cards-category">
+  <div id="welcome" class="triple-card-category home-page-card">
     <div class="big-logo-div">
       <img id="big-logo" src="https://res.cloudinary.com/dxzgio39l/image/upload/v1559442967/VsLogoLong.png" alt="big-logo">
       <hr size=5 width=20% align=center margin=20px>
@@ -49,9 +49,10 @@
       <p>Versus is home to a community of like-minded people who strive to reach their objectives under the guidance of our trainers.</p>
     </div>
   </div>
-  <div id="social" class="home-cards-category">
+  <div id="social" class="triple-card-category home-page-card">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/playlist?list=FLfAzTSE7B6RyD-b2kuZqbEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <div id="social" class="home-cards-category">
+  <div id="social" class="triple-card-category home-page-card">
     <div class="fb-page" data-href="https://www.facebook.com/versusperformance" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/versusperformance" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/versusperformance">Versus Performance HK</a></blockquote></div>
   </div>
 </div>
