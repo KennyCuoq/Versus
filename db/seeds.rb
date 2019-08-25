@@ -25,7 +25,7 @@ muay_thai = {
 
 mma = {
   name: 'Mixed Martial Arts',
-  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566704502/MMA.png',
+  remote_photo_url: 'https://res-console.cloudinary.com/dxzgio39l/thumbnails/transform/v1/image/upload//v1566719589/TU1B/drilldown',
   description: "MMA is a full contact combat sport that allows the use of both striking and grappling techniques, both standing and on the ground. It could include a range of martial arts including boxing, wrestling, Brazilian jiu-jitsu, Muaythai, kickboxing, taekwondo, karate, judo and other styles.
   Aside from going into competitions, MMA is a great overall workout regime suitable for both men and women. Children and teens can benefit from the disciplinary nature of the training – increase focus, concentration as well as character-building."
 }
@@ -114,7 +114,7 @@ HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image
 # home_banner_2
 HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566137171/Banner-MT-2.jpg")
 # home_banner_3
-HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566702963/Banner-BJJ-3.jpg")
+HomeBanner.create!(remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566706270/Banner-BJJ-3.jpg")
 
 # ---------- Home CTA Cards ----------
 
@@ -156,7 +156,7 @@ Trainer.create!(
   specialty: "Muay Thai . Boxing . Fitness . Strength & Conditioning",
   achievement: "Former professionnal Muay Thai Figher in Thailand . Ranked #3 ranked at Rajademnern Stadium, Bangkok",
   description: "Born in ​England, ​Phil came to ​Hong ​Kong in 2010 after spending many years in ​Thailand, living, training and fighting with some of the best ​Muay​thai fighters in the world and attaining a no. 3 ranking at Rajademnern Stadium, Bangkok. With over 20 years experience he teaches ​Muaythai and boxing, and is available for ​private ​training sessions.",
-  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566706618/trainer_phil.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566719389/trainer_phil.jpg"
   )
 
 Trainer.create!(
@@ -164,6 +164,6 @@ Trainer.create!(
   specialty: "Muaythai . Boxing. Fitness . Strengh & Conditioning . NASM qualified",
   achievement: "Professional Muay Thai Fighter . NASM qualified . Hong Kong Muaythai champion 2017 . I-1 champion, I-1 Asia champion ",
   description: "Michael grew up in Hong Kong, studying sports science and started training since he was in his late teens. He has an excellent base in Muaythai, boxing and MMA – competing in and winning professional fights. He is conscientious and an excellent trainer. He teaches Muaythai, boxing and fitness classes, and is also available for private training sessions.",
-  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566706615/trainer_mike.jpg"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566706653/trainer_mike.jpg"
   )
 
