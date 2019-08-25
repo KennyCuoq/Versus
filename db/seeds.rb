@@ -19,7 +19,7 @@ Trainer.destroy_all
 # Set up attributes for disciplines
 muay_thai = {
   name: 'Muay Thai',
-  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566137157/Classes-MT.jpg',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566722783/classes_mt2.jpg',
   description: "Also known as the 'Science of eight limbs', Muaythai is the ancient martial art and national sport of Thailand. Muaythai combines punches, kicks, knee and elbow strikes with clinching and sweeps. It’s considered to be one of the most effective of the striking arts. Our Muaythai classes are authentic from experienced trainers/fighters, in addition to a great workout, they will teach you proper techniques regardless of whether you decide to fight or not."
 }
 
@@ -32,7 +32,7 @@ mma = {
 
 bjj = {
   name: 'Braziilian Jiu-Jitsu',
-  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566702963/Banner-BJJ-3.jpg',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566702453/BJJ.jpg',
   description: "Known as the ‘gentle art’, Brazilian jiujitsu (BJJ) is a martial art, combat sport, and a self defense system that focuses on grappling and especially ground fighting. The art was derived from the japanese martial art of kodokan judo (which itself is derived from japanese jujutsu) in the early 20th century. It teaches that a smaller, weaker person can successfully defend against a bigger, stronger assailant by using leverage and proper technique – most notably by applying joint-locks and chokeholds to defeat the other person. BJJ training can be used for sport grappling tournaments (gi and no-gi) and is essential to mixed martial arts (MMA) training or self defense. Sparring (commonly referred to as “rolling”) and live drilling play a major role in training, and a premium is placed on performance, especially in competition, in relation to progress and ascension through its ranking system."
 }
 
