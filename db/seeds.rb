@@ -25,7 +25,7 @@ muay_thai = {
 
 mma = {
   name: 'Mixed Martial Arts',
-  remote_photo_url: 'https://res-console.cloudinary.com/dxzgio39l/thumbnails/transform/v1/image/upload//v1566719589/TU1B/drilldown',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566721032/MMA.jpg',
   description: "MMA is a full contact combat sport that allows the use of both striking and grappling techniques, both standing and on the ground. It could include a range of martial arts including boxing, wrestling, Brazilian jiu-jitsu, Muaythai, kickboxing, taekwondo, karate, judo and other styles.
   Aside from going into competitions, MMA is a great overall workout regime suitable for both men and women. Children and teens can benefit from the disciplinary nature of the training – increase focus, concentration as well as character-building."
 }
