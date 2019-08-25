@@ -148,7 +148,7 @@ Trainer.create!(
   specialty: "Mixed Martial Arts . Kickboxing . Boxing . Fitness . Strength & Conditioning",
   achievement: "Professional MMA Fighter . BJJ Black Belt (GFTeam) under Julio Cesar Pereira . Kyokushin Karate Black Belt",
   description: "South-African-born, ​Quinton has been a professional fighter and coach for over 20 years. He has lived and worked solely as a professional fighter in ​Japan to compete in ​Brazilian ​​jiujitsu, ​MMA an​d muaythai; a rare breed ​who can teac​h multiple​ disciplines well. He ​is one of the most sought-after MMA trainers in Hong Kong, especiall​y in the professional circle – he ha​s a unique way of teaching his students for them to absorb his teachings, ​he understands each individual’s needs and personalises trainin​g to maximise results.",
-  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566704647/Trainer_quinton.png"
+  remote_photo_url: "https://res.cloudinary.com/dxzgio39l/image/upload/v1566705553/Trainer_quinton.jpg"
   )
 
 Trainer.create!(
