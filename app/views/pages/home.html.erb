@@ -27,7 +27,7 @@
 </div>
 
 <!-- CARDS -->
-<div class="CTA-cards">
+<div class="CTA-cards cards">
   <% @home_cta_cards.each do |card| %>
     <div class="triple-card-category home-CTA-cards" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= card.photo %>)">
       <a href="<%= card.link_url %>"><button type="button" id="card-button" class="button btn btn-dark "><%= card.title.upcase %></button></a>
@@ -37,7 +37,7 @@
 </div>
 
 <!-- HOME PAGE STUFF -->
-<div class="home-cards">
+<div class="home-cards cards">
   <div id="welcome" class="triple-card-category home-page-card">
     <div class="big-logo-div">
       <img id="big-logo" src="https://res.cloudinary.com/dxzgio39l/image/upload/v1559442967/VsLogoLong.png" alt="big-logo">

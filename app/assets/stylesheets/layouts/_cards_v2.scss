@@ -1,0 +1,17 @@
+.DOUBLE-cards {
+  display: grid;
+  padding: 50px;
+}
+
+@media (max-width: 767px) {
+  .DOUBLE-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*// Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .DOUBLE-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}

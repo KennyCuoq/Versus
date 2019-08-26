@@ -3,7 +3,7 @@
   SCHEDULE & FEES
 </div>
 
-<div class="schedule-fees-cards">
+<div class="DOUBLE-cards">
   <div class="schedule-fees-cards-category">
     <h1>SCHEDULE</h1>
     <hr size=5 width=20% align=left margin=20px>
@@ -33,6 +33,7 @@
       <h3><%= package_group.name %></h3>
       <table>
         <% package_group.packages.each_with_index do |package, index| %>
+          <% displayed_price = package.price == 0 ? 'FREE' : '$' + package.price.to_i.to_s %>
           <% rowspan = 1 %>
           <% i = index %>
           <% while !package_group.packages[i + 1].nil? && package.description == package_group.packages[i + 1].description %>
@@ -41,7 +42,7 @@
           <% end %>
           <tr>
             <td class="cell"><%= package.title %></td>
-            <td class="cell">$<%= package.price %></td>
+            <td class="cell"><%= displayed_price %></td>
             <% if package_group.packages[index - 1].description != package.description || index == 0 %>
               <td class="cell" rowspan="<%= rowspan %>"><%= package.description %></td>
             <% end %>
