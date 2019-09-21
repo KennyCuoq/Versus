@@ -10,10 +10,18 @@
     gtag('js', new Date());
     gtag('config', 'UA-147211867-1');
   </script>
-  <!-- GTM data layer set up -->
-  <script>
-  dataLayer = [];
-  </script>
+  <!-- Google Tag Manager trigger for Turbolinks -->
+   <script type="text/javascript">
+   $(document).on('page:change', function(){
+   var url = window.location.href;
+
+   dataLayer.push({
+   'event':'pageView',
+   'virtualUrl': url
+   });
+   });
+   </script>
+  <!-- End Google Tag Manager trigger for Turbolinks -->
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
