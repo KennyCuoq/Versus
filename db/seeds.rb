@@ -23,17 +23,35 @@ muay_thai = {
   description: "Also known as the 'Science of eight limbs', Muaythai is the ancient martial art and national sport of Thailand. Muaythai combines punches, kicks, knee and elbow strikes with clinching and sweeps. It’s considered to be one of the most effective of the striking arts. Our Muaythai classes are authentic from experienced trainers/fighters, in addition to a great workout, they will teach you proper techniques regardless of whether you decide to fight or not."
 }
 
-mma = {
-  name: 'Mixed Martial Arts',
-  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1567324312/MMA2.jpg',
-  description: "MMA is a full contact combat sport that allows the use of both striking and grappling techniques, both standing and on the ground. It could include a range of martial arts including boxing, wrestling, Brazilian jiu-jitsu, Muaythai, kickboxing, taekwondo, karate, judo and other styles.
-  Aside from going into competitions, MMA is a great overall workout regime suitable for both men and women. Children and teens can benefit from the disciplinary nature of the training – increase focus, concentration as well as character-building."
+boxing = {
+  name: 'Boxing',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1569140034/boxing%202.jpg',
+  description: "Another of the most effective striking arts, the “noble art of self defence” is still the biggest and most popular ring sport in the world. Using fast, powerful punches with head movement and nimble footwork to outwit your opponent the intensity of a boxing class is challenging mentally and physically. We welcome both beginner & advanced students to our classes. We focus equally on teaching proper technique & providing an intense workout."
 }
 
 bjj = {
   name: 'Braziilian Jiu-Jitsu',
   remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566702453/BJJ.jpg',
   description: "Known as the ‘gentle art’, Brazilian jiujitsu (BJJ) is a martial art, combat sport, and a self defense system that focuses on grappling and especially ground fighting. The art was derived from the japanese martial art of kodokan judo (which itself is derived from japanese jujutsu) in the early 20th century. It teaches that a smaller, weaker person can successfully defend against a bigger, stronger assailant by using leverage and proper technique – most notably by applying joint-locks and chokeholds to defeat the other person. BJJ training can be used for sport grappling tournaments (gi and no-gi) and is essential to mixed martial arts (MMA) training or self defense. Sparring (commonly referred to as “rolling”) and live drilling play a major role in training, and a premium is placed on performance, especially in competition, in relation to progress and ascension through its ranking system."
+}
+
+mma = {
+  name: 'Mixed Martial Arts',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1569139392/MMA%203.jpg',
+  description: "MMA is a full contact combat sport that allows the use of both striking and grappling techniques, both standing and on the ground. It could include a range of martial arts including boxing, wrestling, Brazilian jiu-jitsu, Muaythai, kickboxing, taekwondo, karate, judo and other styles.
+  Aside from going into competitions, MMA is a great overall workout regime suitable for both men and women. Children and teens can benefit from the disciplinary nature of the training – increase focus, concentration as well as character-building."
+}
+
+kickfit = {
+  name: 'KickFit',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566703287/schedule_fees.jpg',
+  description: "This high intensity workout combines kickboxing techniques with functional training exercises using weights & equipment. Not only will you burn a a significant amount of calories, but you will also build full body coordination, muscle & cardiovascular endurance. KickFit classes are designed to give you a varied and fun workout that gets you fighting fit without the sparring."
+}
+
+hiit = {
+  name: 'HIIT',
+  remote_photo_url: 'https://res.cloudinary.com/dxzgio39l/image/upload/v1566703236/visit_us.jpg',
+  description: "Also known as High Intensity Interval Training. Our popular HIIT workout targets the entire body, enabling you to burn serious calories quickly while building & toning your muscles. We run a variety of circuits which involve rapid bursts of energy followed by short breaks in order to stimulate the fat burning process & the strength build-up. We will make sure you work hard, but also have fun in the process!"
 }
 
 # Actually create disciplines from above data
