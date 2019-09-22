@@ -55,7 +55,7 @@ hiit = {
 }
 
 # Actually create disciplines from above data
-disciplines = [muay_thai, boxing, mma, bjj, kickfit, hiit]
+disciplines = [muay_thai, boxing, bjj, mma, kickfit, hiit]
 disciplines.each do |discipline|
   Discipline.create!(discipline)
 end
