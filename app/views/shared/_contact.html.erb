@@ -32,20 +32,29 @@
       <label for="fname">Name</label>
     </div>
     <div class="col-75">
-      <input type="text" placeholder="Your name" required="">
+      <input type="text" placeholder="Your name" id="name" name="name" required="">
+    </div>
+  </div>
+
+<!-- email -->
+  <div class="row">
+    <div class="col-25">
+      <label for="email">Email</label>
+    </div>
+    <div class="col-75">
+      <input type="text" placeholder="Your email" id="email" name="email" required="">
     </div>
   </div>
 
   <!-- email -->
-  <div class="row">
+<!--   <div class="row">
     <div class="col-25">
-      <label for="fname">Email</label>
+      <label for="email">Email</label>
     </div>
     <div class="col-75">
-      <input type="text" placeholder="Your email" required="">
+      <textarea id="subject" name="subject" placeholder="Your email" style="height:200px"></textarea>
     </div>
-  </div>
-
+  </div> -->
 
   <!-- OPTION 1b => Free trial  -->
   <% if current_page?(free_trial_path) %>
@@ -83,5 +92,5 @@
   <!-- Javascript security, replacing action="//formspree.io/victor.king.fr@gmail.com" in opening formtag -->
   <script>
       var contactform =  document.getElementById('contactform');
-      contactform.setAttribute('action', '//formspree.io/' + 'hello' + '@' + 'versushk' + '.' + 'com');
+      contactform.setAttribute('action', '//formspree.io/' + 'victor.king.fr' + '@' + 'gmail' + '.' + 'com');
   </script>
