@@ -35,6 +35,8 @@
             <%= class_session.clean_start_time %> - <%= class_session.clean_end_time %>
             <% if index != class_session_array.size - 1 %>
               |
+            <% elsif class_session.discipline != @discipline.name %>
+            (<%= class_session.discipline %>)
             <% end %>
           <% end %>
           <br>
