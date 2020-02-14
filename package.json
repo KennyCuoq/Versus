@@ -11,7 +11,7 @@
     "jquery": "^3.4.0",
     "npm": "^6.9.0",
     "popper.js": "^1.15.0",
-    "yarn": "^1.16.0"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.3.1"
